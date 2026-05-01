@@ -1,0 +1,48 @@
+# Unified pipeline config — Section 3.3 of system_architecture.md.
+# All paths are resolved relative to the project root.
+
+video:
+  source_dir: ./data_storage/raw_videos
+  output_dir: ./data_storage/outputs
+  frame_sample_rate: 10            # process every Nth frame for SACNN
+
+storage:
+  rallies_dir:        ./data_storage/intermediate/rallies
+  joints_dir:         ./data_storage/intermediate/joints
+  shuttle_dir:        ./data_storage/intermediate/shuttle
+  hit_events_dir:     ./data_storage/intermediate/hit_events
+  features_dir:       ./data_storage/intermediate/features_npy
+  hit_images_dir:     ./data_storage/intermediate/hit_frame_images
+  strokes_csv_dir:    ./data_storage/outputs/strokes_csv
+  analytics_dir:      ./data_storage/outputs/analytics
+
+models:
+  sacnn:        ./data_storage/weights/sacnn.pt
+  court_rcnn:   ./data_storage/weights/court_kpRCNN.pth
+  human_rcnn:   ./data_storage/weights/kpRCNN.pth
+  tracknet:     ./data_storage/weights/tracknet.pt
+  optimusprime: ./data_storage/weights/opt.pt
+  scaler:       ./data_storage/weights/scaler.pickle
+  bst:          ./data_storage/weights/bst_cg_ap.pt
+  vit_hitter:     ./data_storage/weights/vit_hitter
+  vit_backhand:   ./data_storage/weights/vit_backhand
+  vit_ball_type:  ./data_storage/weights/vit_ball_type
+  vit_ball_height: ./data_storage/weights/vit_ball_height
+  vit_winner:     ./data_storage/weights/vit_winner
+  yolov8_pose:  ./data_storage/weights/yolov8x-pose-p6.pt
+
+stage_1:
+  sa_queue_length: 5
+
+bst:
+  n_classes: 25
+  seq_len: 30
+  d_model: 100
+  pose_style: JnB_bone
+
+analytics:
+  clustering_n: 4
+  pattern_min_support: 0.05
+  pattern_max_len: 6
+  rule_min_conf: 0.6
+  hmm_states: 3
