@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+.idea/
+.vscode/
+.env
+
+# Heavy artefacts — never commit
+data_storage/raw_videos/*
+!data_storage/raw_videos/.gitkeep
+data_storage/intermediate/*
+!data_storage/intermediate/.gitkeep
+data_storage/outputs/*
+!data_storage/outputs/.gitkeep
+data_storage/weights/*
+!data_storage/weights/.gitkeep
