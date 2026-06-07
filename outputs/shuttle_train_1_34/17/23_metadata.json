@@ -1,0 +1,39 @@
+{
+  "video_id": "17",
+  "rally_id": "23",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/17 - NG_Ka_Long_Angus_Jonatan_CHRISTIE_Malaysia_Masters_2020_QuarterFinals.mp4",
+  "start_frame": 23450,
+  "end_frame": 23750,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 110727,
+  "decoder": "opencv",
+  "processed_frames": 301,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/17/23_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/17/23_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 301,
+    "visible_rows": 283,
+    "coverage": 0.9401993355481728,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 300
+  },
+  "denoised_validation": {
+    "rows": 301,
+    "visible_rows": 300,
+    "coverage": 0.9966777408637874,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 300
+  },
+  "denoise_stats": {
+    "removed_jump_count": 11,
+    "out_of_range_count": 0,
+    "interpolated_count": 28
+  },
+  "runtime_sec": 6.906944274902344
+}

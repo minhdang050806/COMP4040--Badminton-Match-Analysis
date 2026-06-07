@@ -1,0 +1,39 @@
+{
+  "video_id": "36",
+  "rally_id": "9",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/36 - Hans-Kristian_Solberg_Vittinghus_Anders_Antonsen_TOYOTA_THAILAND_OPEN_2021_SemiFinals.mp4",
+  "start_frame": 15330,
+  "end_frame": 15690,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 100050,
+  "decoder": "opencv",
+  "processed_frames": 361,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_val_35_39/36/9_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_val_35_39/36/9_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 361,
+    "visible_rows": 265,
+    "coverage": 0.7340720221606648,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 360
+  },
+  "denoised_validation": {
+    "rows": 361,
+    "visible_rows": 286,
+    "coverage": 0.7922437673130194,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 360
+  },
+  "denoise_stats": {
+    "removed_jump_count": 25,
+    "out_of_range_count": 0,
+    "interpolated_count": 46
+  },
+  "runtime_sec": 12.599059104919434
+}

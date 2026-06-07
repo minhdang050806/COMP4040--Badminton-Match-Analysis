@@ -1,0 +1,39 @@
+{
+  "video_id": "16",
+  "rally_id": "72",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/16 - Anthony_Sinisuka_GINTING_Viktor_AXELSEN_Indonesia_Masters_2020_SemiFinals.mp4",
+  "start_frame": 63950,
+  "end_frame": 64550,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 92040,
+  "decoder": "opencv",
+  "processed_frames": 601,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/16/72_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/16/72_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 601,
+    "visible_rows": 589,
+    "coverage": 0.9800332778702163,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 600
+  },
+  "denoised_validation": {
+    "rows": 601,
+    "visible_rows": 593,
+    "coverage": 0.9866888519134775,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 600
+  },
+  "denoise_stats": {
+    "removed_jump_count": 83,
+    "out_of_range_count": 0,
+    "interpolated_count": 87
+  },
+  "runtime_sec": 13.350100755691528
+}

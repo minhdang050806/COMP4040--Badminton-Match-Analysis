@@ -1,0 +1,39 @@
+{
+  "video_id": "10",
+  "rally_id": "58",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/10 - CHOU_Tien_Chen_NG_Ka_Long_Angus_Sudirman_Cup_2019_Group_Stage.mp4",
+  "start_frame": 64225,
+  "end_frame": 64400,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 85991,
+  "decoder": "opencv",
+  "processed_frames": 176,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/10/58_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/10/58_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 176,
+    "visible_rows": 116,
+    "coverage": 0.6590909090909091,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 175
+  },
+  "denoised_validation": {
+    "rows": 176,
+    "visible_rows": 126,
+    "coverage": 0.7159090909090909,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 175
+  },
+  "denoise_stats": {
+    "removed_jump_count": 50,
+    "out_of_range_count": 0,
+    "interpolated_count": 60
+  },
+  "runtime_sec": 4.157875299453735
+}

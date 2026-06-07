@@ -1,0 +1,38 @@
+{
+  "video_id": "40",
+  "rally_id": "58",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/40 - Evgeniya_Kosetskaya_Michelle_Li_HSBC_BWF_WORLD_TOUR_FINALS_2020_QuarterFinals.mp4",
+  "start_frame": 57750,
+  "end_frame": 57990,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 78900,
+  "processed_frames": 241,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle/40/58_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle/40/58_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 241,
+    "visible_rows": 166,
+    "coverage": 0.6887966804979253,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 240
+  },
+  "denoised_validation": {
+    "rows": 241,
+    "visible_rows": 187,
+    "coverage": 0.7759336099585062,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 240
+  },
+  "denoise_stats": {
+    "removed_jump_count": 11,
+    "out_of_range_count": 0,
+    "interpolated_count": 32
+  },
+  "runtime_sec": 4.683164596557617
+}

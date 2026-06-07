@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-06-06T08:15:03.940936+00:00",
+  "script": "project/tools/phase09_pose_position_features.py",
+  "status": "completed_needs_quality_review",
+  "feature_contract": {
+    "legacy_bst_triple": {
+      "joints": "(T,2,17,2) float32",
+      "positions": "(T,2,2) float32",
+      "shuttle": "(T,2) float32"
+    },
+    "validity_sidecar": {
+      "p1_pose_valid": "(T,) bool",
+      "p2_pose_valid": "(T,) bool",
+      "p1_position_valid": "(T,) bool",
+      "p2_position_valid": "(T,) bool",
+      "observed_masks": "same four masks with _observed suffix"
+    }
+  },
+  "runtime_config": {
+    "devices": "0,1",
+    "stroke_windows": "project/outputs/hit_frames/phase07_stroke_windows.csv",
+    "phase07_matches": "project/outputs/hit_frames/phase07_matches.csv",
+    "phase06_manifest": "project/outputs/shuttle/phase06_shuttle_tracking_manifest.csv",
+    "homography_csv": "project/dataset/ShuttleSet/set/homography.csv",
+    "pose_weights": "project/weights/yolo26x-pose.pt",
+    "reference_collated_root": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits",
+    "output_root": "project/outputs/features_yolo26x_bst_tracked_phase02_41_44",
+    "video_id": [
+      "41-44"
+    ],
+    "rally_id": [],
+    "max_clips": 0,
+    "window_strategy": "bst-compatible",
+    "analyze_windows_only": false,
+    "batch_size": 128,
+    "half": true,
+    "imgsz": 640,
+    "det_conf": 0.2,
+    "keypoint_conf": 0.2,
+    "court_margin": 0.2,
+    "side_split": 0.5,
+    "min_valid_keypoints": 5,
+    "max_track_distance": 0.45,
+    "max_track_gap": 10,
+    "max_player_pose_missing_rate": 0.3,
+    "max_player_position_missing_rate": 0.2,
+    "max_both_pose_missing_rate": 0.2,
+    "max_both_position_missing_rate": 0.1,
+    "max_player_side_inconsistent_rate": 0.01
+  },
+  "selected_windows": 3192,
+  "exported_feature_bundles": 3192,
+  "quality": {
+    "status": "completed_needs_quality_review",
+    "total_frames": 183007,
+    "both_pose_missing_frames": 1548,
+    "both_pose_missing_rate": 0.00845869283688602,
+    "both_position_missing_frames": 651,
+    "both_position_missing_rate": 0.0035572409798532295,
+    "p1_pose_missing_rate": 0.45707540333976293,
+    "p2_pose_missing_rate": 0.010376653177200872,
+    "p1_position_missing_rate": 0.4559661580267422,
+    "p2_position_missing_rate": 0.006010698027944287,
+    "pose_recovered_values": 19656,
+    "position_recovered_values": 19779,
+    "pose_tensor_zero_rate": 0.3274273628276514,
+    "position_tensor_zero_rate": 0.23098843467189778,
+    "player_pos_out_of_filter_range": 0,
+    "rejected_out_of_range_candidates": 61246,
+    "player_side_inconsistent_frames": 0,
+    "player_side_inconsistent_rate": 0.0,
+    "quality_thresholds": {
+      "max_player_pose_missing_rate": 0.3,
+      "max_player_position_missing_rate": 0.2,
+      "max_both_pose_missing_rate": 0.2,
+      "max_both_position_missing_rate": 0.1,
+      "max_player_side_inconsistent_rate": 0.01
+    }
+  },
+  "problems": [],
+  "workers": [
+    {
+      "created_at": "2026-06-06T08:15:02.300229+00:00",
+      "status": "worker_completed",
+      "worker_index": 0,
+      "worker_count": 2,
+      "worker_device": "0",
+      "selected_windows": 1596,
+      "exported_feature_bundles": 1596,
+      "problems": []
+    },
+    {
+      "created_at": "2026-06-06T08:14:37.278296+00:00",
+      "status": "worker_completed",
+      "worker_index": 1,
+      "worker_count": 2,
+      "worker_device": "1",
+      "selected_windows": 1596,
+      "exported_feature_bundles": 1596,
+      "problems": []
+    }
+  ],
+  "outputs": {
+    "manifest": "project/outputs/features_yolo26x_bst_tracked_phase02_41_44/phase09_feature_manifest.csv",
+    "validation": "project/outputs/features_yolo26x_bst_tracked_phase02_41_44/phase09_feature_validation.csv",
+    "summary": "project/outputs/features_yolo26x_bst_tracked_phase02_41_44/phase09_feature_summary.json"
+  }
+}

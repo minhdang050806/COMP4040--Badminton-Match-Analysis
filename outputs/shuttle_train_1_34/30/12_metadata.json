@@ -1,0 +1,39 @@
+{
+  "video_id": "30",
+  "rally_id": "12",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/30 - Anders_Antonsen_Sameer_Verma_TOYOTA_THAILAND_OPEN_2021_QuarterFinals.mp4",
+  "start_frame": 18900,
+  "end_frame": 19950,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 164250,
+  "decoder": "opencv",
+  "processed_frames": 1051,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/30/12_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/30/12_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 1051,
+    "visible_rows": 983,
+    "coverage": 0.9352997145575642,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 1050
+  },
+  "denoised_validation": {
+    "rows": 1051,
+    "visible_rows": 994,
+    "coverage": 0.9457659372026641,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 1050
+  },
+  "denoise_stats": {
+    "removed_jump_count": 84,
+    "out_of_range_count": 0,
+    "interpolated_count": 95
+  },
+  "runtime_sec": 21.516875743865967
+}

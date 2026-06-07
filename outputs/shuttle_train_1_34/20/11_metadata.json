@@ -1,0 +1,39 @@
+{
+  "video_id": "20",
+  "rally_id": "11",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/20 - Viktor_AXELSEN_NG_Ka_Long_Angus_Malaysia_Masters_2020_SemiFinals.mp4",
+  "start_frame": 16975,
+  "end_frame": 17750,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 81650,
+  "decoder": "opencv",
+  "processed_frames": 776,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/20/11_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/20/11_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 776,
+    "visible_rows": 737,
+    "coverage": 0.9497422680412371,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 775
+  },
+  "denoised_validation": {
+    "rows": 776,
+    "visible_rows": 755,
+    "coverage": 0.9729381443298969,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 775
+  },
+  "denoise_stats": {
+    "removed_jump_count": 77,
+    "out_of_range_count": 0,
+    "interpolated_count": 95
+  },
+  "runtime_sec": 16.01347064971924
+}

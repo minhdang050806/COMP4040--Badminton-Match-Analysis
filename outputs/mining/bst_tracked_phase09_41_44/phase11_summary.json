@@ -1,0 +1,193 @@
+{
+  "created_at": "2026-06-06T15:21:41.502118+00:00",
+  "integration_root": "project/outputs/integration/bst_tracked_phase09_41_44",
+  "output_root": "project/outputs/mining/bst_tracked_phase09_41_44",
+  "confidence_threshold": 0.8,
+  "cluster_bootstrap_repeats": 100,
+  "rows": {
+    "all_predictions": 3192,
+    "clean_predictions": 3178,
+    "alias_rows_excluded": 14
+  },
+  "distribution": {
+    "gt_strokes": 36482,
+    "gt_rallies": 3683,
+    "gt_mean_rally_length": 9.905511811023622,
+    "pred_clean_strokes": 3178,
+    "pred_high_conf_strokes": 1131,
+    "pred_rallies": 343,
+    "pred_mean_rally_length": 9.26530612244898,
+    "none_rate": 0.0670232850849591,
+    "high_conf_coverage": 0.35588420390182507
+  },
+  "transition_comparison": {
+    "hard": {
+      "frobenius": 1.231607621915013,
+      "mean_row_kl": 0.510695455393082
+    },
+    "soft": {
+      "frobenius": 1.6166635108859977,
+      "mean_row_kl": 0.6231632335347205
+    },
+    "high_confidence": {
+      "frobenius": 1.2114914881879986,
+      "mean_row_kl": 1.3719700754310062
+    },
+    "old_baseline": {
+      "frobenius_gt_minus_pred": 3.6515082979624016,
+      "mean_row_kl_gt_pred": 11.722820929515503,
+      "labeled_rows": 2986
+    }
+  },
+  "patterns": {
+    "gt": 120,
+    "predicted": 104,
+    "high_confidence": 6
+  },
+  "clustering_gt": {
+    "n_units": 88,
+    "n_active_stroke_features": 19,
+    "best_k": 2,
+    "best_silhouette": 0.15176451979324443,
+    "best_bootstrap_stability_mean_ari": 0.4396491617281116,
+    "best_min_cluster_size": 20,
+    "diagnostics": [
+      {
+        "k": 2,
+        "silhouette": 0.15176451979324443,
+        "bootstrap_stability_mean_ari": 0.4396491617281116,
+        "bootstrap_stability_std_ari": 0.3609676256274283,
+        "min_cluster_size": 20,
+        "max_cluster_size": 68,
+        "min_cluster_fraction": 0.22727272727272727
+      },
+      {
+        "k": 3,
+        "silhouette": 0.10114624484367245,
+        "bootstrap_stability_mean_ari": 0.37313042565594307,
+        "bootstrap_stability_std_ari": 0.2162392288762248,
+        "min_cluster_size": 16,
+        "max_cluster_size": 37,
+        "min_cluster_fraction": 0.18181818181818182
+      },
+      {
+        "k": 4,
+        "silhouette": 0.1153852469773911,
+        "bootstrap_stability_mean_ari": 0.45694331051327935,
+        "bootstrap_stability_std_ari": 0.18516655166360743,
+        "min_cluster_size": 9,
+        "max_cluster_size": 34,
+        "min_cluster_fraction": 0.10227272727272728
+      },
+      {
+        "k": 5,
+        "silhouette": 0.11148476464099565,
+        "bootstrap_stability_mean_ari": 0.37056714484997305,
+        "bootstrap_stability_std_ari": 0.1406057811894719,
+        "min_cluster_size": 9,
+        "max_cluster_size": 34,
+        "min_cluster_fraction": 0.10227272727272728
+      },
+      {
+        "k": 6,
+        "silhouette": 0.1030180617495101,
+        "bootstrap_stability_mean_ari": 0.32870298302839046,
+        "bootstrap_stability_std_ari": 0.08938474666596805,
+        "min_cluster_size": 9,
+        "max_cluster_size": 20,
+        "min_cluster_fraction": 0.10227272727272728
+      },
+      {
+        "k": 7,
+        "silhouette": 0.10744159972795829,
+        "bootstrap_stability_mean_ari": 0.3830367344423806,
+        "bootstrap_stability_std_ari": 0.07970955470427915,
+        "min_cluster_size": 7,
+        "max_cluster_size": 18,
+        "min_cluster_fraction": 0.07954545454545454
+      },
+      {
+        "k": 8,
+        "silhouette": 0.0955862819199555,
+        "bootstrap_stability_mean_ari": 0.34142453461374844,
+        "bootstrap_stability_std_ari": 0.07542964987356995,
+        "min_cluster_size": 4,
+        "max_cluster_size": 18,
+        "min_cluster_fraction": 0.045454545454545456
+      }
+    ]
+  },
+  "clustering_pred": {
+    "n_units": 8,
+    "n_active_stroke_features": 12,
+    "best_k": 2,
+    "best_silhouette": 0.200245977052663,
+    "best_bootstrap_stability_mean_ari": 0.504668384879725,
+    "best_min_cluster_size": 4,
+    "diagnostics": [
+      {
+        "k": 2,
+        "silhouette": 0.200245977052663,
+        "bootstrap_stability_mean_ari": 0.504668384879725,
+        "bootstrap_stability_std_ari": 0.4149636383531416,
+        "min_cluster_size": 4,
+        "max_cluster_size": 4,
+        "min_cluster_fraction": 0.5
+      },
+      {
+        "k": 3,
+        "silhouette": 0.2250781423069116,
+        "bootstrap_stability_mean_ari": 0.7875687527374922,
+        "bootstrap_stability_std_ari": 0.2534630024891064,
+        "min_cluster_size": 1,
+        "max_cluster_size": 4,
+        "min_cluster_fraction": 0.125
+      },
+      {
+        "k": 4,
+        "silhouette": 0.19416745024567353,
+        "bootstrap_stability_mean_ari": 0.5955952807188039,
+        "bootstrap_stability_std_ari": 0.32931849903456023,
+        "min_cluster_size": 1,
+        "max_cluster_size": 4,
+        "min_cluster_fraction": 0.125
+      },
+      {
+        "k": 5,
+        "silhouette": 0.1504759026980887,
+        "bootstrap_stability_mean_ari": 0.2838050378146609,
+        "bootstrap_stability_std_ari": 0.3082124620560594,
+        "min_cluster_size": 1,
+        "max_cluster_size": 4,
+        "min_cluster_fraction": 0.125
+      },
+      {
+        "k": 6,
+        "silhouette": 0.052175257050227894,
+        "bootstrap_stability_mean_ari": 0.18028846153846156,
+        "bootstrap_stability_std_ari": 0.24286699034656808,
+        "min_cluster_size": 1,
+        "max_cluster_size": 2,
+        "min_cluster_fraction": 0.125
+      },
+      {
+        "k": 7,
+        "silhouette": 0.01535701404726543,
+        "bootstrap_stability_mean_ari": 0.24579124579124578,
+        "bootstrap_stability_std_ari": 0.46185665183790564,
+        "min_cluster_size": 1,
+        "max_cluster_size": 2,
+        "min_cluster_fraction": 0.125
+      }
+    ]
+  },
+  "heatmaps_gt": {
+    "landing_heatmap_gt_all.png": 35297,
+    "player_position_heatmap_gt.png": 35314
+  },
+  "predicted_event_occupancy": {
+    "Top": 1965,
+    "Bottom": 3146
+  },
+  "approximate_shuttle_endpoints": 3178
+}

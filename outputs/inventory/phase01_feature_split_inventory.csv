@@ -1,0 +1,19 @@
+classes,clip_branches,joints_files,missing_triple_files,pos_files,sample_branch,sample_joints_shape,sample_pos_shape,sample_shuttle_shape,shuttle_files,split,variant
+25,25741,25741,0,25741,project/dataset/ShuttleSet/merged_seq100_between_2_hits_with_max_limits/train/Bottom_切球/11_1_16_4,"[60, 2, 17, 2]","[60, 2, 2]","[60, 2]",25741,train,merged_seq100_between_2_hits_with_max_limits
+25,4241,4241,0,4241,project/dataset/ShuttleSet/merged_seq100_between_2_hits_with_max_limits/val/Bottom_切球/35_1_13_17,"[79, 2, 17, 2]","[79, 2, 2]","[79, 2]",4241,val,merged_seq100_between_2_hits_with_max_limits
+25,3499,3499,0,3499,project/dataset/ShuttleSet/merged_seq100_between_2_hits_with_max_limits/test/Bottom_切球/39_1_23_9,"[70, 2, 17, 2]","[70, 2, 2]","[70, 2]",3499,test,merged_seq100_between_2_hits_with_max_limits
+25,25741,25741,0,25741,project/dataset/ShuttleSet/merged_seq30/train/Bottom_切球/11_1_16_4,"[24, 2, 17, 2]","[24, 2, 2]","[24, 2]",25741,train,merged_seq30
+25,4241,4241,0,4241,project/dataset/ShuttleSet/merged_seq30/val/Bottom_切球/35_1_13_17,"[30, 2, 17, 2]","[30, 2, 2]","[30, 2]",4241,val,merged_seq30
+25,3499,3499,0,3499,project/dataset/ShuttleSet/merged_seq30/test/Bottom_切球/39_1_23_9,"[30, 2, 17, 2]","[30, 2, 2]","[30, 2]",3499,test,merged_seq30
+25,25741,25741,0,25741,project/dataset/ShuttleSet/merged_seq30_3d/train/Bottom_切球/11_1_16_4,"[24, 2, 17, 3]","[24, 2, 2]","[24, 2]",25741,train,merged_seq30_3d
+25,4241,4241,0,4241,project/dataset/ShuttleSet/merged_seq30_3d/val/Bottom_切球/35_1_13_17,"[30, 2, 17, 3]","[30, 2, 2]","[30, 2]",4241,val,merged_seq30_3d
+25,3499,3499,0,3499,project/dataset/ShuttleSet/merged_seq30_3d/test/Bottom_切球/39_1_23_9,"[30, 2, 17, 3]","[30, 2, 2]","[30, 2]",3499,test,merged_seq30_3d
+35,25741,25741,0,25741,project/dataset/ShuttleSet/seq100_between_2_hits_with_max_limits/train/Bottom_切球/11_1_16_4,"[60, 2, 17, 2]","[60, 2, 2]","[60, 2]",25741,train,seq100_between_2_hits_with_max_limits
+35,4241,4241,0,4241,project/dataset/ShuttleSet/seq100_between_2_hits_with_max_limits/val/Bottom_切球/35_1_13_17,"[79, 2, 17, 2]","[79, 2, 2]","[79, 2]",4241,val,seq100_between_2_hits_with_max_limits
+35,3499,3499,0,3499,project/dataset/ShuttleSet/seq100_between_2_hits_with_max_limits/test/Bottom_切球/39_1_23_9,"[70, 2, 17, 2]","[70, 2, 2]","[70, 2]",3499,test,seq100_between_2_hits_with_max_limits
+35,25741,25741,0,25741,project/dataset/ShuttleSet/seq30/train/Bottom_切球/11_1_16_4,"[24, 2, 17, 2]","[24, 2, 2]","[24, 2]",25741,train,seq30
+35,4241,4241,0,4241,project/dataset/ShuttleSet/seq30/val/Bottom_切球/35_1_13_17,"[30, 2, 17, 2]","[30, 2, 2]","[30, 2]",4241,val,seq30
+35,3499,3499,0,3499,project/dataset/ShuttleSet/seq30/test/Bottom_切球/39_1_23_9,"[30, 2, 17, 2]","[30, 2, 2]","[30, 2]",3499,test,seq30
+35,25741,25741,0,25741,project/dataset/ShuttleSet/seq30_3d/train/Bottom_切球/11_1_16_4,"[24, 2, 17, 3]","[24, 2, 2]","[24, 2]",25741,train,seq30_3d
+35,4241,4241,0,4241,project/dataset/ShuttleSet/seq30_3d/val/Bottom_切球/35_1_13_17,"[30, 2, 17, 3]","[30, 2, 2]","[30, 2]",4241,val,seq30_3d
+35,3499,3499,0,3499,project/dataset/ShuttleSet/seq30_3d/test/Bottom_切球/39_1_23_9,"[30, 2, 17, 3]","[30, 2, 2]","[30, 2]",3499,test,seq30_3d

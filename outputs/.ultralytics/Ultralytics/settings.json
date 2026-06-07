@@ -1,0 +1,21 @@
+{
+  "settings_version": "0.0.6",
+  "datasets_dir": "/home/dang.cpm/datasets",
+  "weights_dir": "/home/dang.cpm/weights",
+  "runs_dir": "/home/dang.cpm/runs",
+  "uuid": "9a85ef6f21cc02a1b1e069fbe418b32b1000c74bbbb9c8a898ca41da793534aa",
+  "sync": true,
+  "api_key": "",
+  "openai_api_key": "",
+  "clearml": true,
+  "comet": true,
+  "dvc": true,
+  "hub": true,
+  "mlflow": true,
+  "neptune": true,
+  "raytune": true,
+  "tensorboard": false,
+  "wandb": false,
+  "vscode_msg": true,
+  "openvino_msg": true
+}

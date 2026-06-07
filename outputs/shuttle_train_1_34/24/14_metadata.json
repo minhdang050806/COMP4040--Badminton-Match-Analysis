@@ -1,0 +1,39 @@
+{
+  "video_id": "24",
+  "rally_id": "14",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/24 - Anthony_Sinisuka_Ginting_Rasmus_Gemke_YONEX_Thailand_Open_2021_QuarterFinals.mp4",
+  "start_frame": 21960,
+  "end_frame": 22590,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 134850,
+  "decoder": "opencv",
+  "processed_frames": 631,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/24/14_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/24/14_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 631,
+    "visible_rows": 517,
+    "coverage": 0.8193343898573693,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 630
+  },
+  "denoised_validation": {
+    "rows": 631,
+    "visible_rows": 562,
+    "coverage": 0.8906497622820919,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 630
+  },
+  "denoise_stats": {
+    "removed_jump_count": 41,
+    "out_of_range_count": 0,
+    "interpolated_count": 86
+  },
+  "runtime_sec": 13.174077033996582
+}

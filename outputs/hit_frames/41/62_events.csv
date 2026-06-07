@@ -1,0 +1,14 @@
+video_id,rally_id,event_rank,Frame,OriginalFrame,TimeSec,X,Y,event_reason
+41,62,1,306,64356,2145.200000,,,phase02_ground_truth_label
+41,62,2,326,64376,2145.866667,,,phase02_ground_truth_label
+41,62,3,351,64401,2146.700000,,,phase02_ground_truth_label
+41,62,4,394,64444,2148.133333,,,phase02_ground_truth_label
+41,62,5,411,64461,2148.700000,,,phase02_ground_truth_label
+41,62,6,438,64488,2149.600000,,,phase02_ground_truth_label
+41,62,7,467,64517,2150.566667,,,phase02_ground_truth_label
+41,62,8,508,64558,2151.933333,,,phase02_ground_truth_label
+41,62,9,543,64593,2153.100000,,,phase02_ground_truth_label
+41,62,10,567,64617,2153.900000,,,phase02_ground_truth_label
+41,62,11,593,64643,2154.766667,,,phase02_ground_truth_label
+41,62,12,621,64671,2155.700000,,,phase02_ground_truth_label
+41,62,13,658,64708,2156.933333,,,phase02_ground_truth_label

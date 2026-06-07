@@ -1,0 +1,39 @@
+{
+  "video_id": "39",
+  "rally_id": "35",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/39 - Anthony_Sinisuka_Ginting_Lee_Zii_Jia_HSBC_BWF_WORLD_TOUR_FINALS_2020_QuarterFinals.mp4",
+  "start_frame": 39630,
+  "end_frame": 40080,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 108900,
+  "decoder": "opencv",
+  "processed_frames": 451,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_val_35_39/39/35_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_val_35_39/39/35_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 451,
+    "visible_rows": 329,
+    "coverage": 0.729490022172949,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 450
+  },
+  "denoised_validation": {
+    "rows": 451,
+    "visible_rows": 377,
+    "coverage": 0.835920177383592,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 450
+  },
+  "denoise_stats": {
+    "removed_jump_count": 42,
+    "out_of_range_count": 0,
+    "interpolated_count": 90
+  },
+  "runtime_sec": 15.103755235671997
+}

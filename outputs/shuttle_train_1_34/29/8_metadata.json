@@ -1,0 +1,39 @@
+{
+  "video_id": "29",
+  "rally_id": "8",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/29 - An_Se_Young_Pornpawee_Chochuwong_TOYOTA_THAILAND_OPEN_2021_QuarterFinals.mp4",
+  "start_frame": 13380,
+  "end_frame": 13740,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 97500,
+  "decoder": "opencv",
+  "processed_frames": 361,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/29/8_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/29/8_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 361,
+    "visible_rows": 345,
+    "coverage": 0.9556786703601108,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 360
+  },
+  "denoised_validation": {
+    "rows": 361,
+    "visible_rows": 320,
+    "coverage": 0.8864265927977839,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 360
+  },
+  "denoise_stats": {
+    "removed_jump_count": 102,
+    "out_of_range_count": 0,
+    "interpolated_count": 77
+  },
+  "runtime_sec": 7.636037826538086
+}

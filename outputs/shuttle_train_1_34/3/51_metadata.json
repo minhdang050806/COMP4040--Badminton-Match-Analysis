@@ -1,0 +1,39 @@
+{
+  "video_id": "3",
+  "rally_id": "51",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/03 - Kento_MOMOTA_CHOU_Tien_Chen_KOREA_OPEN_2019_Final.mp4",
+  "start_frame": 52975,
+  "end_frame": 53350,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 107901,
+  "decoder": "ffmpeg",
+  "processed_frames": 376,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/3/51_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/3/51_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 376,
+    "visible_rows": 234,
+    "coverage": 0.6223404255319149,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 375
+  },
+  "denoised_validation": {
+    "rows": 376,
+    "visible_rows": 230,
+    "coverage": 0.6117021276595744,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 375
+  },
+  "denoise_stats": {
+    "removed_jump_count": 55,
+    "out_of_range_count": 0,
+    "interpolated_count": 51
+  },
+  "runtime_sec": 15.07435154914856
+}

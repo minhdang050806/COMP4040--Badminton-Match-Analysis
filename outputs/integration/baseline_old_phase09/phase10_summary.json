@@ -1,0 +1,157 @@
+{
+  "generated_at_utc": "2026-06-06T05:09:00.603408+00:00",
+  "script": "project/tools/phase10_run_bst_inference.py",
+  "status": "passed",
+  "input_root": "project/outputs/integration/baseline_old_phase09/inputs",
+  "checkpoint": "project/weights/bst_shuttleset_finetuned_protocol.pt",
+  "output_root": "project/outputs/integration/baseline_old_phase09",
+  "device": "cuda:2",
+  "torch_version": "2.7.1+cu126",
+  "batch_size": 256,
+  "num_workers": 0,
+  "elapsed_seconds": 3.9819095134735107,
+  "prediction_rows": 6282,
+  "labeled_evaluation_rows": 2986,
+  "candidate_only_rows": 3296,
+  "class_count": 25,
+  "evaluation": [
+    {
+      "evaluation_group": "all_candidates",
+      "rows": 6282,
+      "labeled_rows": 2986,
+      "accuracy": 0.0840589417280643,
+      "macro_precision_supported": 0.24787081859853877,
+      "macro_recall_supported": 0.11753449897561062,
+      "macro_f1_supported": 0.09231343373538468,
+      "supported_class_count": 25
+    },
+    {
+      "evaluation_group": "exact_label_all",
+      "rows": 2986,
+      "labeled_rows": 2986,
+      "accuracy": 0.0840589417280643,
+      "macro_precision_supported": 0.24787081859853877,
+      "macro_recall_supported": 0.11753449897561062,
+      "macro_f1_supported": 0.09231343373538468,
+      "supported_class_count": 25
+    },
+    {
+      "evaluation_group": "reference_test_primary",
+      "rows": 1897,
+      "labeled_rows": 1897,
+      "accuracy": 0.09225092250922509,
+      "macro_precision_supported": 0.2844248741033202,
+      "macro_recall_supported": 0.1234365051431237,
+      "macro_f1_supported": 0.1007178482448812,
+      "supported_class_count": 25
+    },
+    {
+      "evaluation_group": "reference_val_diagnostic",
+      "rows": 1089,
+      "labeled_rows": 1089,
+      "accuracy": 0.06978879706152434,
+      "macro_precision_supported": 0.2628273798823973,
+      "macro_recall_supported": 0.10726026790520767,
+      "macro_f1_supported": 0.08108517133887369,
+      "supported_class_count": 23
+    },
+    {
+      "evaluation_group": "exact_label_pose_dropout_lt_50",
+      "rows": 1436,
+      "labeled_rows": 1436,
+      "accuracy": 0.12534818941504178,
+      "macro_precision_supported": 0.2715178140778537,
+      "macro_recall_supported": 0.14954226562061007,
+      "macro_f1_supported": 0.1278059821605575,
+      "supported_class_count": 25
+    },
+    {
+      "evaluation_group": "reference_test_pose_dropout_lt_50",
+      "rows": 925,
+      "labeled_rows": 925,
+      "accuracy": 0.1362162162162162,
+      "macro_precision_supported": 0.2914690758786903,
+      "macro_recall_supported": 0.1636419629044967,
+      "macro_f1_supported": 0.13563515426617812,
+      "supported_class_count": 25
+    },
+    {
+      "evaluation_group": "exact_label_pose_dropout_lt_25",
+      "rows": 914,
+      "labeled_rows": 914,
+      "accuracy": 0.1323851203501094,
+      "macro_precision_supported": 0.2603610569090696,
+      "macro_recall_supported": 0.17008774120994752,
+      "macro_f1_supported": 0.14455623983712113,
+      "supported_class_count": 25
+    },
+    {
+      "evaluation_group": "reference_test_pose_dropout_lt_25",
+      "rows": 609,
+      "labeled_rows": 609,
+      "accuracy": 0.1412151067323481,
+      "macro_precision_supported": 0.2537635652079871,
+      "macro_recall_supported": 0.17958314662933336,
+      "macro_f1_supported": 0.14700431998214375,
+      "supported_class_count": 25
+    },
+    {
+      "evaluation_group": "exact_label_all_pose_missing",
+      "rows": 329,
+      "labeled_rows": 329,
+      "accuracy": 0.0364741641337386,
+      "macro_precision_supported": 0.001458966565349544,
+      "macro_recall_supported": 0.04,
+      "macro_f1_supported": 0.0028152492668621705,
+      "supported_class_count": 25
+    },
+    {
+      "evaluation_group": "exact_label_video_41",
+      "rows": 1089,
+      "labeled_rows": 1089,
+      "accuracy": 0.06978879706152434,
+      "macro_precision_supported": 0.2628273798823973,
+      "macro_recall_supported": 0.10726026790520767,
+      "macro_f1_supported": 0.08108517133887369,
+      "supported_class_count": 23
+    },
+    {
+      "evaluation_group": "exact_label_video_42",
+      "rows": 594,
+      "labeled_rows": 594,
+      "accuracy": 0.04208754208754209,
+      "macro_precision_supported": 0.07623116456613993,
+      "macro_recall_supported": 0.07769408369408369,
+      "macro_f1_supported": 0.025647861097377975,
+      "supported_class_count": 25
+    },
+    {
+      "evaluation_group": "exact_label_video_43",
+      "rows": 507,
+      "labeled_rows": 507,
+      "accuracy": 0.047337278106508875,
+      "macro_precision_supported": 0.14152520576131686,
+      "macro_recall_supported": 0.04156398687648688,
+      "macro_f1_supported": 0.03912793991135072,
+      "supported_class_count": 24
+    },
+    {
+      "evaluation_group": "exact_label_video_44",
+      "rows": 796,
+      "labeled_rows": 796,
+      "accuracy": 0.15829145728643215,
+      "macro_precision_supported": 0.30113313405015224,
+      "macro_recall_supported": 0.16595642201778202,
+      "macro_f1_supported": 0.13980501620034763,
+      "supported_class_count": 25
+    }
+  ],
+  "outputs": {
+    "predictions": "project/outputs/integration/baseline_old_phase09/phase10_predictions.csv",
+    "structured_strokes": "project/outputs/integration/baseline_old_phase09/phase10_structured_strokes.csv",
+    "evaluation_by_group": "project/outputs/integration/baseline_old_phase09/phase10_evaluation_by_group.csv",
+    "logits": "project/outputs/integration/baseline_old_phase09/phase10_logits.npy",
+    "probabilities": "project/outputs/integration/baseline_old_phase09/phase10_probabilities.npy",
+    "summary": "project/outputs/integration/baseline_old_phase09/phase10_summary.json"
+  }
+}

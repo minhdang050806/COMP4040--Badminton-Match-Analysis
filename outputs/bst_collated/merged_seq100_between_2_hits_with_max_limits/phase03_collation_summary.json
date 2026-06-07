@@ -1,0 +1,348 @@
+{
+  "generated_at_utc": "2026-06-02T18:50:42.393670+00:00",
+  "source_root": "project/dataset/ShuttleSet/merged_seq100_between_2_hits_with_max_limits",
+  "output_root": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits",
+  "seq_len": 100,
+  "pose_styles_written": [
+    "J_only",
+    "JnB_interp",
+    "JnB_bone",
+    "Jn2B"
+  ],
+  "class_count": 25,
+  "bone_pair_count": 19,
+  "splits": [
+    {
+      "J_only": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/train/J_only.npy",
+        "shape": [
+          25741,
+          100,
+          2,
+          17,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 700155328
+      },
+      "JnB_interp": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/train/JnB_interp.npy",
+        "shape": [
+          25741,
+          100,
+          2,
+          36,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 1482681728
+      },
+      "JnB_bone": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/train/JnB_bone.npy",
+        "shape": [
+          25741,
+          100,
+          2,
+          36,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 1482681728
+      },
+      "Jn2B": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/train/Jn2B.npy",
+        "shape": [
+          25741,
+          100,
+          2,
+          55,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 2265208128
+      },
+      "pos": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/train/pos.npy",
+        "shape": [
+          25741,
+          100,
+          2,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 41185728
+      },
+      "shuttle": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/train/shuttle.npy",
+        "shape": [
+          25741,
+          100,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 20592928
+      },
+      "videos_len": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/train/videos_len.npy",
+        "shape": [
+          25741
+        ],
+        "dtype": "int64",
+        "shape_ok": true,
+        "size_bytes": 206056
+      },
+      "labels": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/train/labels.npy",
+        "shape": [
+          25741
+        ],
+        "dtype": "int64",
+        "shape_ok": true,
+        "size_bytes": 206056
+      },
+      "label_min": 0,
+      "label_max": 24,
+      "label_unique_count": 25,
+      "videos_len_min": 6,
+      "videos_len_max": 98,
+      "videos_len_over_seq_len": 0,
+      "all_shapes_ok": true,
+      "split": "train",
+      "clip_count": 25741,
+      "metadata_path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/train_metadata.csv",
+      "class_count": 25,
+      "original_len_min": 6,
+      "original_len_max": 98,
+      "collated_video_len_min": 6,
+      "collated_video_len_max": 98
+    },
+    {
+      "J_only": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/val/J_only.npy",
+        "shape": [
+          4241,
+          100,
+          2,
+          17,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 115355328
+      },
+      "JnB_interp": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/val/JnB_interp.npy",
+        "shape": [
+          4241,
+          100,
+          2,
+          36,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 244281728
+      },
+      "JnB_bone": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/val/JnB_bone.npy",
+        "shape": [
+          4241,
+          100,
+          2,
+          36,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 244281728
+      },
+      "Jn2B": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/val/Jn2B.npy",
+        "shape": [
+          4241,
+          100,
+          2,
+          55,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 373208128
+      },
+      "pos": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/val/pos.npy",
+        "shape": [
+          4241,
+          100,
+          2,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 6785728
+      },
+      "shuttle": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/val/shuttle.npy",
+        "shape": [
+          4241,
+          100,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 3392928
+      },
+      "videos_len": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/val/videos_len.npy",
+        "shape": [
+          4241
+        ],
+        "dtype": "int64",
+        "shape_ok": true,
+        "size_bytes": 34056
+      },
+      "labels": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/val/labels.npy",
+        "shape": [
+          4241
+        ],
+        "dtype": "int64",
+        "shape_ok": true,
+        "size_bytes": 34056
+      },
+      "label_min": 0,
+      "label_max": 24,
+      "label_unique_count": 25,
+      "videos_len_min": 7,
+      "videos_len_max": 98,
+      "videos_len_over_seq_len": 0,
+      "all_shapes_ok": true,
+      "split": "val",
+      "clip_count": 4241,
+      "metadata_path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/val_metadata.csv",
+      "class_count": 25,
+      "original_len_min": 7,
+      "original_len_max": 98,
+      "collated_video_len_min": 7,
+      "collated_video_len_max": 98
+    },
+    {
+      "J_only": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/test/J_only.npy",
+        "shape": [
+          3499,
+          100,
+          2,
+          17,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 95172928
+      },
+      "JnB_interp": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/test/JnB_interp.npy",
+        "shape": [
+          3499,
+          100,
+          2,
+          36,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 201542528
+      },
+      "JnB_bone": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/test/JnB_bone.npy",
+        "shape": [
+          3499,
+          100,
+          2,
+          36,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 201542528
+      },
+      "Jn2B": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/test/Jn2B.npy",
+        "shape": [
+          3499,
+          100,
+          2,
+          55,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 307912128
+      },
+      "pos": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/test/pos.npy",
+        "shape": [
+          3499,
+          100,
+          2,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 5598528
+      },
+      "shuttle": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/test/shuttle.npy",
+        "shape": [
+          3499,
+          100,
+          2
+        ],
+        "dtype": "float32",
+        "shape_ok": true,
+        "size_bytes": 2799328
+      },
+      "videos_len": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/test/videos_len.npy",
+        "shape": [
+          3499
+        ],
+        "dtype": "int64",
+        "shape_ok": true,
+        "size_bytes": 28120
+      },
+      "labels": {
+        "path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/test/labels.npy",
+        "shape": [
+          3499
+        ],
+        "dtype": "int64",
+        "shape_ok": true,
+        "size_bytes": 28120
+      },
+      "label_min": 0,
+      "label_max": 24,
+      "label_unique_count": 25,
+      "videos_len_min": 7,
+      "videos_len_max": 98,
+      "videos_len_over_seq_len": 0,
+      "all_shapes_ok": true,
+      "split": "test",
+      "clip_count": 3499,
+      "metadata_path": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits/test_metadata.csv",
+      "class_count": 25,
+      "original_len_min": 7,
+      "original_len_max": 98,
+      "collated_video_len_min": 7,
+      "collated_video_len_max": 98
+    }
+  ],
+  "total_clips": 33481,
+  "validation_status": "passed"
+}

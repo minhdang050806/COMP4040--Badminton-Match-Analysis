@@ -1,0 +1,62 @@
+{
+  "created_at": "2026-06-05T20:39:48.374924+00:00",
+  "script": "project/tools/phase06_shuttle_tracking.py",
+  "tracknet_root": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "device": "cuda:1",
+  "torch_cuda_available": true,
+  "runtime_config": {
+    "phase05_root": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/outputs/rallies",
+    "raw_video_root": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos",
+    "output_root": "project/outputs/shuttle_val_35_39",
+    "video_ids": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39"
+    ],
+    "rally_ids": [],
+    "max_rallies": 0,
+    "include_rejected": false,
+    "input_video": "",
+    "direct_video_id": "direct",
+    "direct_rally_id": "rally_0001",
+    "start_frame": 0,
+    "end_frame": null,
+    "requested_device": "cuda",
+    "gpu_id": 1,
+    "batch_size": 1,
+    "threshold": 0.5,
+    "decoder": "auto",
+    "max_frames": 0,
+    "max_jump_px": 100.0,
+    "interpolate_gap": 5
+  },
+  "checkpoint_params": {
+    "model_name": "TrackNetV2",
+    "num_frame": 3,
+    "input_type": "2d",
+    "epochs": 50,
+    "batch_size": 4,
+    "learning_rate": 0.001,
+    "tolerance": 4,
+    "save_dir": "exp",
+    "resume_training": false,
+    "debug": false
+  },
+  "task_count": 465,
+  "processed_frames": 190335,
+  "total_raw_visible_rows": 163880,
+  "raw_coverage": 0.8610082223448131,
+  "total_denoised_visible_rows": 171696,
+  "denoised_coverage": 0.9020726613602332,
+  "removed_jump_count": 19224,
+  "out_of_range_count": 0,
+  "interpolated_count": 27040,
+  "runtime_sec_total": 6681.8576555252075,
+  "outputs": {
+    "manifest": "project/outputs/shuttle_val_35_39/phase06_shuttle_tracking_manifest.csv",
+    "validation": "project/outputs/shuttle_val_35_39/phase06_shuttle_tracking_validation.csv"
+  }
+}

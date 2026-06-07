@@ -1,0 +1,620 @@
+{
+  "generated_at_utc": "2026-06-02T18:31:03.353594+00:00",
+  "raw_video_count": 44,
+  "raw_info_json_count": 44,
+  "match_rows": 44,
+  "homography_rows": 44,
+  "match_directories": 44,
+  "set_csv_files": 104,
+  "stroke_rows": 36482,
+  "match_csv_sha256": "6b99d49706a56fd66408e198b9fc062f23df0433f257bc5abff6d18be12a0028",
+  "homography_csv_sha256": "b10f9f14a56ed499ded1805337e1d30d80aa0b3a72b6821dd76694c6a45b8035",
+  "match_columns": [
+    "id",
+    "video",
+    "tournament",
+    "round",
+    "year",
+    "month",
+    "day",
+    "set",
+    "duration",
+    "winner",
+    "loser",
+    "downcourt",
+    "url"
+  ],
+  "homography_columns": [
+    "id",
+    "video",
+    "homography_matrix",
+    "upleft_x",
+    "upright_x",
+    "downleft_x",
+    "downright_x",
+    "upleft_y",
+    "upright_y",
+    "downleft_y",
+    "downright_y"
+  ],
+  "feature_variants": [
+    "merged_seq100_between_2_hits_with_max_limits",
+    "merged_seq30",
+    "merged_seq30_3d",
+    "seq100_between_2_hits_with_max_limits",
+    "seq30",
+    "seq30_3d"
+  ],
+  "feature_split_rows": [
+    {
+      "variant": "merged_seq100_between_2_hits_with_max_limits",
+      "split": "train",
+      "classes": 25,
+      "joints_files": 25741,
+      "pos_files": 25741,
+      "shuttle_files": 25741,
+      "clip_branches": 25741,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/merged_seq100_between_2_hits_with_max_limits/train/Bottom_切球/11_1_16_4",
+      "sample_joints_shape": [
+        60,
+        2,
+        17,
+        2
+      ],
+      "sample_pos_shape": [
+        60,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        60,
+        2
+      ]
+    },
+    {
+      "variant": "merged_seq100_between_2_hits_with_max_limits",
+      "split": "val",
+      "classes": 25,
+      "joints_files": 4241,
+      "pos_files": 4241,
+      "shuttle_files": 4241,
+      "clip_branches": 4241,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/merged_seq100_between_2_hits_with_max_limits/val/Bottom_切球/35_1_13_17",
+      "sample_joints_shape": [
+        79,
+        2,
+        17,
+        2
+      ],
+      "sample_pos_shape": [
+        79,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        79,
+        2
+      ]
+    },
+    {
+      "variant": "merged_seq100_between_2_hits_with_max_limits",
+      "split": "test",
+      "classes": 25,
+      "joints_files": 3499,
+      "pos_files": 3499,
+      "shuttle_files": 3499,
+      "clip_branches": 3499,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/merged_seq100_between_2_hits_with_max_limits/test/Bottom_切球/39_1_23_9",
+      "sample_joints_shape": [
+        70,
+        2,
+        17,
+        2
+      ],
+      "sample_pos_shape": [
+        70,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        70,
+        2
+      ]
+    },
+    {
+      "variant": "merged_seq30",
+      "split": "train",
+      "classes": 25,
+      "joints_files": 25741,
+      "pos_files": 25741,
+      "shuttle_files": 25741,
+      "clip_branches": 25741,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/merged_seq30/train/Bottom_切球/11_1_16_4",
+      "sample_joints_shape": [
+        24,
+        2,
+        17,
+        2
+      ],
+      "sample_pos_shape": [
+        24,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        24,
+        2
+      ]
+    },
+    {
+      "variant": "merged_seq30",
+      "split": "val",
+      "classes": 25,
+      "joints_files": 4241,
+      "pos_files": 4241,
+      "shuttle_files": 4241,
+      "clip_branches": 4241,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/merged_seq30/val/Bottom_切球/35_1_13_17",
+      "sample_joints_shape": [
+        30,
+        2,
+        17,
+        2
+      ],
+      "sample_pos_shape": [
+        30,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        30,
+        2
+      ]
+    },
+    {
+      "variant": "merged_seq30",
+      "split": "test",
+      "classes": 25,
+      "joints_files": 3499,
+      "pos_files": 3499,
+      "shuttle_files": 3499,
+      "clip_branches": 3499,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/merged_seq30/test/Bottom_切球/39_1_23_9",
+      "sample_joints_shape": [
+        30,
+        2,
+        17,
+        2
+      ],
+      "sample_pos_shape": [
+        30,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        30,
+        2
+      ]
+    },
+    {
+      "variant": "merged_seq30_3d",
+      "split": "train",
+      "classes": 25,
+      "joints_files": 25741,
+      "pos_files": 25741,
+      "shuttle_files": 25741,
+      "clip_branches": 25741,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/merged_seq30_3d/train/Bottom_切球/11_1_16_4",
+      "sample_joints_shape": [
+        24,
+        2,
+        17,
+        3
+      ],
+      "sample_pos_shape": [
+        24,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        24,
+        2
+      ]
+    },
+    {
+      "variant": "merged_seq30_3d",
+      "split": "val",
+      "classes": 25,
+      "joints_files": 4241,
+      "pos_files": 4241,
+      "shuttle_files": 4241,
+      "clip_branches": 4241,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/merged_seq30_3d/val/Bottom_切球/35_1_13_17",
+      "sample_joints_shape": [
+        30,
+        2,
+        17,
+        3
+      ],
+      "sample_pos_shape": [
+        30,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        30,
+        2
+      ]
+    },
+    {
+      "variant": "merged_seq30_3d",
+      "split": "test",
+      "classes": 25,
+      "joints_files": 3499,
+      "pos_files": 3499,
+      "shuttle_files": 3499,
+      "clip_branches": 3499,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/merged_seq30_3d/test/Bottom_切球/39_1_23_9",
+      "sample_joints_shape": [
+        30,
+        2,
+        17,
+        3
+      ],
+      "sample_pos_shape": [
+        30,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        30,
+        2
+      ]
+    },
+    {
+      "variant": "seq100_between_2_hits_with_max_limits",
+      "split": "train",
+      "classes": 35,
+      "joints_files": 25741,
+      "pos_files": 25741,
+      "shuttle_files": 25741,
+      "clip_branches": 25741,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/seq100_between_2_hits_with_max_limits/train/Bottom_切球/11_1_16_4",
+      "sample_joints_shape": [
+        60,
+        2,
+        17,
+        2
+      ],
+      "sample_pos_shape": [
+        60,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        60,
+        2
+      ]
+    },
+    {
+      "variant": "seq100_between_2_hits_with_max_limits",
+      "split": "val",
+      "classes": 35,
+      "joints_files": 4241,
+      "pos_files": 4241,
+      "shuttle_files": 4241,
+      "clip_branches": 4241,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/seq100_between_2_hits_with_max_limits/val/Bottom_切球/35_1_13_17",
+      "sample_joints_shape": [
+        79,
+        2,
+        17,
+        2
+      ],
+      "sample_pos_shape": [
+        79,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        79,
+        2
+      ]
+    },
+    {
+      "variant": "seq100_between_2_hits_with_max_limits",
+      "split": "test",
+      "classes": 35,
+      "joints_files": 3499,
+      "pos_files": 3499,
+      "shuttle_files": 3499,
+      "clip_branches": 3499,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/seq100_between_2_hits_with_max_limits/test/Bottom_切球/39_1_23_9",
+      "sample_joints_shape": [
+        70,
+        2,
+        17,
+        2
+      ],
+      "sample_pos_shape": [
+        70,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        70,
+        2
+      ]
+    },
+    {
+      "variant": "seq30",
+      "split": "train",
+      "classes": 35,
+      "joints_files": 25741,
+      "pos_files": 25741,
+      "shuttle_files": 25741,
+      "clip_branches": 25741,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/seq30/train/Bottom_切球/11_1_16_4",
+      "sample_joints_shape": [
+        24,
+        2,
+        17,
+        2
+      ],
+      "sample_pos_shape": [
+        24,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        24,
+        2
+      ]
+    },
+    {
+      "variant": "seq30",
+      "split": "val",
+      "classes": 35,
+      "joints_files": 4241,
+      "pos_files": 4241,
+      "shuttle_files": 4241,
+      "clip_branches": 4241,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/seq30/val/Bottom_切球/35_1_13_17",
+      "sample_joints_shape": [
+        30,
+        2,
+        17,
+        2
+      ],
+      "sample_pos_shape": [
+        30,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        30,
+        2
+      ]
+    },
+    {
+      "variant": "seq30",
+      "split": "test",
+      "classes": 35,
+      "joints_files": 3499,
+      "pos_files": 3499,
+      "shuttle_files": 3499,
+      "clip_branches": 3499,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/seq30/test/Bottom_切球/39_1_23_9",
+      "sample_joints_shape": [
+        30,
+        2,
+        17,
+        2
+      ],
+      "sample_pos_shape": [
+        30,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        30,
+        2
+      ]
+    },
+    {
+      "variant": "seq30_3d",
+      "split": "train",
+      "classes": 35,
+      "joints_files": 25741,
+      "pos_files": 25741,
+      "shuttle_files": 25741,
+      "clip_branches": 25741,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/seq30_3d/train/Bottom_切球/11_1_16_4",
+      "sample_joints_shape": [
+        24,
+        2,
+        17,
+        3
+      ],
+      "sample_pos_shape": [
+        24,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        24,
+        2
+      ]
+    },
+    {
+      "variant": "seq30_3d",
+      "split": "val",
+      "classes": 35,
+      "joints_files": 4241,
+      "pos_files": 4241,
+      "shuttle_files": 4241,
+      "clip_branches": 4241,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/seq30_3d/val/Bottom_切球/35_1_13_17",
+      "sample_joints_shape": [
+        30,
+        2,
+        17,
+        3
+      ],
+      "sample_pos_shape": [
+        30,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        30,
+        2
+      ]
+    },
+    {
+      "variant": "seq30_3d",
+      "split": "test",
+      "classes": 35,
+      "joints_files": 3499,
+      "pos_files": 3499,
+      "shuttle_files": 3499,
+      "clip_branches": 3499,
+      "missing_triple_files": 0,
+      "sample_branch": "project/dataset/ShuttleSet/seq30_3d/test/Bottom_切球/39_1_23_9",
+      "sample_joints_shape": [
+        30,
+        2,
+        17,
+        3
+      ],
+      "sample_pos_shape": [
+        30,
+        2,
+        2
+      ],
+      "sample_shuttle_shape": [
+        30,
+        2
+      ]
+    }
+  ],
+  "checkpoint_rows": [
+    {
+      "path": "external_repos/Automated-Hit-frame-Detection-for-Badminton-Match-Analysis/src/models/weights/sacnn.pt",
+      "role": "Phase 05 rally / shot-angle filtering",
+      "exists": true,
+      "is_file": true,
+      "is_dir": false,
+      "size_bytes": 346656,
+      "sha256": "e29e7b11c5e308bcaddaee03633ae64da04d01fdf254a0216a71bfb1807c1653"
+    },
+    {
+      "path": "external_repos/Automated-Hit-frame-Detection-for-Badminton-Match-Analysis/src/models/weights/scaler.pickle",
+      "role": "legacy Automated-Hit-frame pipeline scaler; not needed for standalone SA-CNN",
+      "exists": true,
+      "is_file": true,
+      "is_dir": false,
+      "size_bytes": 2090,
+      "sha256": "eb8bf8b0353441db52123a348ca78c6875aef244c0e048fd8efeb6bb03b3b603"
+    },
+    {
+      "path": "external_repos/TrackNetV3/exp/model_best.pt",
+      "role": "Phase 06 shuttle tracking",
+      "exists": true,
+      "is_file": true,
+      "is_dir": false,
+      "size_bytes": 181830533,
+      "sha256": "ff3fc5687cc83cda19095116881d564ed7fe60de3d013fd4d6a801e88299dc68"
+    },
+    {
+      "path": "project/weights/on_ShuttleSet/bst_CG_AP_JnB_bone_between_2_hits_with_max_limits_seq_100_merged_2.pt",
+      "role": "Phase 04 / Phase 10 BST_CG_AP stroke classification",
+      "exists": true,
+      "is_file": true,
+      "is_dir": false,
+      "size_bytes": 7514133,
+      "sha256": "997f43e52b20cb47517132c71d3e147d7d717a2d9651cfbe7651a5003bd66809"
+    },
+    {
+      "path": "project/weights/on_ShuttleSet",
+      "role": "all local ShuttleSet BST/baseline weights",
+      "exists": true,
+      "is_file": false,
+      "is_dir": true,
+      "size_bytes": null,
+      "sha256": null,
+      "pt_file_count": 51
+    }
+  ],
+  "repo_rows": [
+    {
+      "path": "external_repos/BST-Badminton-Stroke-type-Transformer",
+      "role": "BST code and data-prep scripts",
+      "exists": true,
+      "is_file": false,
+      "is_dir": true,
+      "size_bytes": null,
+      "sha256": null,
+      "git_head": "2ef1797"
+    },
+    {
+      "path": "external_repos/TrackNetV3",
+      "role": "shuttle tracking and hit-frame scripts",
+      "exists": true,
+      "is_file": false,
+      "is_dir": true,
+      "size_bytes": null,
+      "sha256": null,
+      "git_head": "d1d96f3"
+    },
+    {
+      "path": "external_repos/Automated-Hit-frame-Detection-for-Badminton-Match-Analysis",
+      "role": "SA-CNN rally filtering source",
+      "exists": true,
+      "is_file": false,
+      "is_dir": true,
+      "size_bytes": null,
+      "sha256": null,
+      "git_head": "af7722384"
+    },
+    {
+      "path": "external_repos/monotrack",
+      "role": "court detection source",
+      "exists": true,
+      "is_file": false,
+      "is_dir": true,
+      "size_bytes": null,
+      "sha256": null,
+      "git_head": "39e9227"
+    },
+    {
+      "path": "external_repos/mmpose",
+      "role": "pose estimation source",
+      "exists": true,
+      "is_file": false,
+      "is_dir": true,
+      "size_bytes": null,
+      "sha256": null,
+      "git_head": "759b39c1"
+    }
+  ],
+  "torch_cuda_available": false,
+  "torch_cuda_device_count": 0
+}

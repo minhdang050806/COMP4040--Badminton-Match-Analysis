@@ -1,0 +1,27 @@
+opening,support_count,support_frac,server_win_rate
+short_service -> net_shot -> lob,403,0.12212,0.4913
+short_service -> net_shot -> net_shot,283,0.08576,0.4982
+unknown -> net_shot -> lob,156,0.04727,0.4487
+short_service -> push -> clear,120,0.03636,0.375
+short_service -> net_shot -> push,113,0.03424,0.4425
+unknown -> net_shot -> net_shot,108,0.03273,0.4815
+short_service -> lob -> clear,107,0.03242,0.4673
+short_service -> push -> transition_drop,96,0.02909,0.5104
+short_service -> lob -> drop,94,0.02848,0.4362
+short_service -> lob -> smash,71,0.02152,0.5352
+short_service -> lob -> tap_smash,70,0.02121,0.6
+long_service -> smash -> defensive_net,67,0.0203,0.5075
+short_service -> push -> smash,66,0.02,0.4848
+short_service -> push -> drop,60,0.01818,0.5833
+short_service -> push -> tap_smash,57,0.01727,0.4561
+short_service -> push -> backcourt_drive,56,0.01697,0.5
+long_service -> tap_smash -> defensive_net,49,0.01485,0.449
+short_service -> cross_net -> net_shot,47,0.01424,0.4255
+short_service -> lob -> transition_drop,44,0.01333,0.3636
+short_service -> cross_net -> lob,42,0.01273,0.4048
+unknown -> lob -> clear,42,0.01273,0.5952
+unknown -> net_shot -> push,40,0.01212,0.55
+unknown -> smash -> defensive_net,38,0.01152,0.4474
+unknown -> lob -> tap_smash,38,0.01152,0.4737
+unknown -> push -> clear,38,0.01152,0.4474
+short_service -> push -> drive,33,0.01,0.4545

@@ -1,0 +1,5 @@
+video_id,rally_id,event_rank,Frame,OriginalFrame,TimeSec,X,Y,event_reason
+42,64,1,165,64575,2152.500000,,,phase02_ground_truth_label
+42,64,2,224,64634,2154.466667,,,phase02_ground_truth_label
+42,64,3,241,64651,2155.033333,,,phase02_ground_truth_label
+42,64,4,267,64677,2155.900000,,,phase02_ground_truth_label

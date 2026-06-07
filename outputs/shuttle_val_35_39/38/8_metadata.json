@@ -1,0 +1,39 @@
+{
+  "video_id": "38",
+  "rally_id": "8",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/38 - Carolina_Marin_An_Se_Young_HSBC_BWF_WORLD_TOUR_FINALS_2020_QuarterFinals.mp4",
+  "start_frame": 12300,
+  "end_frame": 14220,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 118950,
+  "decoder": "opencv",
+  "processed_frames": 1921,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_val_35_39/38/8_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_val_35_39/38/8_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 1921,
+    "visible_rows": 1554,
+    "coverage": 0.8089536699635607,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 1920
+  },
+  "denoised_validation": {
+    "rows": 1921,
+    "visible_rows": 1635,
+    "coverage": 0.8511192087454451,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 1920
+  },
+  "denoise_stats": {
+    "removed_jump_count": 189,
+    "out_of_range_count": 0,
+    "interpolated_count": 270
+  },
+  "runtime_sec": 60.03160881996155
+}

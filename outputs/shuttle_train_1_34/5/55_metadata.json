@@ -1,0 +1,39 @@
+{
+  "video_id": "5",
+  "rally_id": "55",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/05 - Kento_MOMOTA_CHOU_Tien_Chen_Fuzhou_Open_2018_Finals.mp4",
+  "start_frame": 66100,
+  "end_frame": 66575,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 128780,
+  "decoder": "ffmpeg",
+  "processed_frames": 476,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/5/55_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/5/55_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 476,
+    "visible_rows": 424,
+    "coverage": 0.8907563025210085,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 475
+  },
+  "denoised_validation": {
+    "rows": 476,
+    "visible_rows": 458,
+    "coverage": 0.9621848739495799,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 475
+  },
+  "denoise_stats": {
+    "removed_jump_count": 56,
+    "out_of_range_count": 0,
+    "interpolated_count": 90
+  },
+  "runtime_sec": 13.48830509185791
+}

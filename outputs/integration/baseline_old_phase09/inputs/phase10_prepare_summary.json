@@ -1,0 +1,91 @@
+{
+  "generated_at_utc": "2026-06-06T04:59:29.903117+00:00",
+  "script": "project/tools/phase10_prepare_bst_inputs.py",
+  "status": "passed",
+  "feature_root": "project/outputs/features_yolo26x_41_44",
+  "feature_manifest": "project/outputs/features_yolo26x_41_44/phase09_feature_manifest.csv",
+  "feature_validation": "project/outputs/features_yolo26x_41_44/phase09_feature_validation.csv",
+  "phase02_table": "project/outputs/tables/shuttleset_ground_truth_strokes.csv",
+  "reference_collated_root": "project/outputs/bst_collated/merged_seq100_between_2_hits_with_max_limits",
+  "output_root": "project/outputs/integration/baseline_old_phase09/inputs",
+  "seq_len": 100,
+  "selected_feature_rows": 6282,
+  "phase02_matched_rows": 2986,
+  "rows_with_bst_reference_label": 2986,
+  "candidate_only_rows": 3296,
+  "quality_group_counts": {
+    "candidate_only_all_pose_missing": 531,
+    "candidate_only_pose_dropout_25_50": 437,
+    "candidate_only_pose_dropout_ge_50": 883,
+    "candidate_only_pose_dropout_lt_25": 1445,
+    "exact_label_all_pose_missing": 329,
+    "exact_label_pose_dropout_25_50": 522,
+    "exact_label_pose_dropout_ge_50": 1221,
+    "exact_label_pose_dropout_lt_25": 914
+  },
+  "arrays": {
+    "JnB_bone": {
+      "path": "project/outputs/integration/baseline_old_phase09/inputs/JnB_bone.npy",
+      "shape": [
+        6282,
+        100,
+        2,
+        36,
+        2
+      ],
+      "dtype": "float32",
+      "shape_ok": true,
+      "finite": true,
+      "size_bytes": 361843328
+    },
+    "pos": {
+      "path": "project/outputs/integration/baseline_old_phase09/inputs/pos.npy",
+      "shape": [
+        6282,
+        100,
+        2,
+        2
+      ],
+      "dtype": "float32",
+      "shape_ok": true,
+      "finite": true,
+      "size_bytes": 10051328
+    },
+    "shuttle": {
+      "path": "project/outputs/integration/baseline_old_phase09/inputs/shuttle.npy",
+      "shape": [
+        6282,
+        100,
+        2
+      ],
+      "dtype": "float32",
+      "shape_ok": true,
+      "finite": true,
+      "size_bytes": 5025728
+    },
+    "videos_len": {
+      "path": "project/outputs/integration/baseline_old_phase09/inputs/videos_len.npy",
+      "shape": [
+        6282
+      ],
+      "dtype": "int64",
+      "shape_ok": true,
+      "finite": true,
+      "size_bytes": 50384
+    },
+    "labels": {
+      "path": "project/outputs/integration/baseline_old_phase09/inputs/labels.npy",
+      "shape": [
+        6282
+      ],
+      "dtype": "int64",
+      "shape_ok": true,
+      "finite": true,
+      "size_bytes": 50384
+    }
+  },
+  "outputs": {
+    "metadata": "project/outputs/integration/baseline_old_phase09/inputs/phase10_input_metadata.csv",
+    "summary": "project/outputs/integration/baseline_old_phase09/inputs/phase10_prepare_summary.json"
+  }
+}

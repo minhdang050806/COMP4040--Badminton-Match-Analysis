@@ -1,0 +1,39 @@
+{
+  "video_id": "9",
+  "rally_id": "37",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/09 - CHOU_Tien_Chen_Jonatan_CHRISTIE_Sudirman_Cup_2019_Quarter-finals.mp4",
+  "start_frame": 37000,
+  "end_frame": 37075,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 73738,
+  "decoder": "opencv",
+  "processed_frames": 76,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/9/37_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/9/37_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 76,
+    "visible_rows": 74,
+    "coverage": 0.9736842105263158,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 75
+  },
+  "denoised_validation": {
+    "rows": 76,
+    "visible_rows": 75,
+    "coverage": 0.9868421052631579,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 75
+  },
+  "denoise_stats": {
+    "removed_jump_count": 12,
+    "out_of_range_count": 0,
+    "interpolated_count": 13
+  },
+  "runtime_sec": 1.887915849685669
+}

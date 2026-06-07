@@ -1,0 +1,39 @@
+{
+  "video_id": "25",
+  "rally_id": "4",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/25 - Carolina_Marin_Supanida_Katethong_YONEX_Thailand_Open_2021_QuarterFinals.mp4",
+  "start_frame": 13380,
+  "end_frame": 13980,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 94493,
+  "decoder": "opencv",
+  "processed_frames": 601,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/25/4_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/25/4_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 601,
+    "visible_rows": 484,
+    "coverage": 0.8053244592346089,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 600
+  },
+  "denoised_validation": {
+    "rows": 601,
+    "visible_rows": 543,
+    "coverage": 0.9034941763727121,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 600
+  },
+  "denoise_stats": {
+    "removed_jump_count": 36,
+    "out_of_range_count": 0,
+    "interpolated_count": 95
+  },
+  "runtime_sec": 11.345406293869019
+}

@@ -1,0 +1,39 @@
+{
+  "video_id": "15",
+  "rally_id": "39",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/15 - Anthony_Sinisuka_GINTING_Anders_ANTONSEN_Indonesia_Masters_2020_Final.mp4",
+  "start_frame": 53625,
+  "end_frame": 54025,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 149487,
+  "decoder": "opencv",
+  "processed_frames": 401,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/15/39_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/15/39_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 401,
+    "visible_rows": 389,
+    "coverage": 0.970074812967581,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 400
+  },
+  "denoised_validation": {
+    "rows": 401,
+    "visible_rows": 397,
+    "coverage": 0.9900249376558603,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 400
+  },
+  "denoise_stats": {
+    "removed_jump_count": 48,
+    "out_of_range_count": 0,
+    "interpolated_count": 56
+  },
+  "runtime_sec": 9.203757047653198
+}

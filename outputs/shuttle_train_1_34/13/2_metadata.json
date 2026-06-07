@@ -1,0 +1,39 @@
+{
+  "video_id": "13",
+  "rally_id": "2",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/13 - Kento_MOMOTA_Viktor_AXELSEN_Malaysia_Masters_2020_Finals.mp4",
+  "start_frame": 16975,
+  "end_frame": 17700,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 113751,
+  "decoder": "ffmpeg",
+  "processed_frames": 726,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/13/2_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/13/2_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 726,
+    "visible_rows": 647,
+    "coverage": 0.8911845730027548,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 725
+  },
+  "denoised_validation": {
+    "rows": 726,
+    "visible_rows": 702,
+    "coverage": 0.9669421487603306,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 725
+  },
+  "denoise_stats": {
+    "removed_jump_count": 38,
+    "out_of_range_count": 0,
+    "interpolated_count": 93
+  },
+  "runtime_sec": 17.683648824691772
+}

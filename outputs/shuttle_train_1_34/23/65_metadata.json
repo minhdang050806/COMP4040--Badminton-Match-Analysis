@@ -1,0 +1,39 @@
+{
+  "video_id": "23",
+  "rally_id": "65",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/23 - Ng_Ka_Long_Angus_Lee_Cheuk_Yiu_YONEX_Thailand_Open_2021_QuarterFinals.mp4",
+  "start_frame": 79350,
+  "end_frame": 79740,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 97050,
+  "decoder": "opencv",
+  "processed_frames": 391,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/23/65_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/23/65_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 391,
+    "visible_rows": 370,
+    "coverage": 0.9462915601023018,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 390
+  },
+  "denoised_validation": {
+    "rows": 391,
+    "visible_rows": 381,
+    "coverage": 0.9744245524296675,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 390
+  },
+  "denoise_stats": {
+    "removed_jump_count": 8,
+    "out_of_range_count": 0,
+    "interpolated_count": 19
+  },
+  "runtime_sec": 8.467631816864014
+}

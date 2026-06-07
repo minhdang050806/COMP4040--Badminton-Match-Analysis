@@ -1,0 +1,25 @@
+predicted_player_side,predicted_stroke_type,count
+Bottom,clear,9
+Bottom,cross-court net shot,39
+Bottom,drive,95
+Bottom,drop,25
+Bottom,lob,127
+Bottom,long service,94
+Bottom,net shot,77
+Bottom,push,59
+Bottom,return net,162
+Bottom,rush,706
+Bottom,short service,15
+Bottom,smash,30
+Top,clear,8
+Top,cross-court net shot,25
+Top,drive,91
+Top,drop,7
+Top,lob,10
+Top,long service,29
+Top,net shot,13
+Top,push,111
+Top,return net,14
+Top,rush,857
+Top,short service,7
+Top,smash,127

@@ -1,0 +1,39 @@
+{
+  "video_id": "2",
+  "rally_id": "58",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/02 - CHEN_Long_CHOU_Tien_Chen_World_Tour_Finals_Group_Stage.mp4",
+  "start_frame": 51550,
+  "end_frame": 52425,
+  "fps": 25.0,
+  "width": 1920,
+  "height": 1080,
+  "frame_count": 95417,
+  "decoder": "opencv",
+  "processed_frames": 876,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/2/58_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/2/58_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 876,
+    "visible_rows": 744,
+    "coverage": 0.8493150684931506,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 875
+  },
+  "denoised_validation": {
+    "rows": 876,
+    "visible_rows": 786,
+    "coverage": 0.8972602739726028,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 875
+  },
+  "denoise_stats": {
+    "removed_jump_count": 36,
+    "out_of_range_count": 0,
+    "interpolated_count": 78
+  },
+  "runtime_sec": 35.60839819908142
+}

@@ -1,0 +1,38 @@
+{
+  "video_id": "43",
+  "rally_id": "35",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/43 - Carolina_Marin_Pornpawee_Chochuwong_HSBC_BWF_WORLD_TOUR_FINALS_2020_SemiFinals.mp4",
+  "start_frame": 41820,
+  "end_frame": 42360,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 97950,
+  "processed_frames": 541,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle/43/35_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle/43/35_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 541,
+    "visible_rows": 505,
+    "coverage": 0.933456561922366,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 540
+  },
+  "denoised_validation": {
+    "rows": 541,
+    "visible_rows": 514,
+    "coverage": 0.9500924214417745,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 540
+  },
+  "denoise_stats": {
+    "removed_jump_count": 61,
+    "out_of_range_count": 0,
+    "interpolated_count": 70
+  },
+  "runtime_sec": 10.390408992767334
+}

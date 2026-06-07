@@ -1,0 +1,39 @@
+{
+  "video_id": "34",
+  "rally_id": "45",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/34 - Ratchanok_Intanon_Pusarla_V._Sindhu_TOYOTA_THAILAND_OPEN_2021_QuarterFinals.mp4",
+  "start_frame": 56160,
+  "end_frame": 56640,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 87150,
+  "decoder": "opencv",
+  "processed_frames": 481,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/34/45_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/34/45_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 481,
+    "visible_rows": 442,
+    "coverage": 0.918918918918919,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 480
+  },
+  "denoised_validation": {
+    "rows": 481,
+    "visible_rows": 446,
+    "coverage": 0.9272349272349273,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 480
+  },
+  "denoise_stats": {
+    "removed_jump_count": 44,
+    "out_of_range_count": 0,
+    "interpolated_count": 48
+  },
+  "runtime_sec": 9.13553786277771
+}

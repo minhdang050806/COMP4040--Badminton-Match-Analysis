@@ -1,0 +1,39 @@
+{
+  "video_id": "31",
+  "rally_id": "67",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/31 - Carolina_Marin_Neslihan_Yigit_TOYOTA_THAILAND_OPEN_2021_QuarterFinals.mp4",
+  "start_frame": 68850,
+  "end_frame": 69390,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 79200,
+  "decoder": "opencv",
+  "processed_frames": 541,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/31/67_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/31/67_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 541,
+    "visible_rows": 376,
+    "coverage": 0.6950092421441775,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 540
+  },
+  "denoised_validation": {
+    "rows": 541,
+    "visible_rows": 513,
+    "coverage": 0.9482439926062847,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 540
+  },
+  "denoise_stats": {
+    "removed_jump_count": 54,
+    "out_of_range_count": 0,
+    "interpolated_count": 191
+  },
+  "runtime_sec": 10.148669242858887
+}

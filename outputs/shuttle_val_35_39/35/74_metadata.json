@@ -1,0 +1,39 @@
+{
+  "video_id": "35",
+  "rally_id": "74",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/35 - Carolina_Marin_An_Se_Young_TOYOTA_THAILAND_OPEN_2021_SemiFinals.mp4",
+  "start_frame": 87240,
+  "end_frame": 88170,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 112650,
+  "decoder": "ffmpeg",
+  "processed_frames": 931,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_val_35_39/35/74_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_val_35_39/35/74_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 931,
+    "visible_rows": 837,
+    "coverage": 0.8990332975295381,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 930
+  },
+  "denoised_validation": {
+    "rows": 931,
+    "visible_rows": 874,
+    "coverage": 0.9387755102040817,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 930
+  },
+  "denoise_stats": {
+    "removed_jump_count": 145,
+    "out_of_range_count": 0,
+    "interpolated_count": 182
+  },
+  "runtime_sec": 36.80837631225586
+}

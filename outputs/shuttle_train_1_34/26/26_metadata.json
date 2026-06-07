@@ -1,0 +1,39 @@
+{
+  "video_id": "26",
+  "rally_id": "26",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/26 - Viktor_Axelsen_Jonatan_Christie_YONEX_Thailand_Open_2021_QuarterFinals.mp4",
+  "start_frame": 33810,
+  "end_frame": 34980,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 91050,
+  "decoder": "opencv",
+  "processed_frames": 1171,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/26/26_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/26/26_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 1171,
+    "visible_rows": 1163,
+    "coverage": 0.9931682322801024,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 1170
+  },
+  "denoised_validation": {
+    "rows": 1171,
+    "visible_rows": 1151,
+    "coverage": 0.9829205807002562,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 1170
+  },
+  "denoise_stats": {
+    "removed_jump_count": 151,
+    "out_of_range_count": 0,
+    "interpolated_count": 139
+  },
+  "runtime_sec": 21.64959406852722
+}

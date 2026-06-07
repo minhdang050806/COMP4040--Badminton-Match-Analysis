@@ -1,0 +1,39 @@
+{
+  "video_id": "11",
+  "rally_id": "92",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/11 - CHOU_Tien_Chen_Jonatan_CHRISTIE_Indonesia_Open_2019_Quarter-finals.mp4",
+  "start_frame": 81825,
+  "end_frame": 82125,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 130581,
+  "decoder": "ffmpeg",
+  "processed_frames": 301,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/11/92_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/11/92_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 301,
+    "visible_rows": 209,
+    "coverage": 0.6943521594684385,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 300
+  },
+  "denoised_validation": {
+    "rows": 301,
+    "visible_rows": 226,
+    "coverage": 0.7508305647840532,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 300
+  },
+  "denoise_stats": {
+    "removed_jump_count": 29,
+    "out_of_range_count": 0,
+    "interpolated_count": 46
+  },
+  "runtime_sec": 7.899093866348267
+}

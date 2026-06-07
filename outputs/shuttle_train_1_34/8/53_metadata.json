@@ -1,0 +1,39 @@
+{
+  "video_id": "8",
+  "rally_id": "53",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/08 - CHOU_Tien_Chen_Anders_ANTONSEN_Fuzhou_Open_2019_Semi-finals.mp4",
+  "start_frame": 65525,
+  "end_frame": 65875,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 85921,
+  "decoder": "ffmpeg",
+  "processed_frames": 351,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/8/53_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/8/53_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 351,
+    "visible_rows": 323,
+    "coverage": 0.9202279202279202,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 350
+  },
+  "denoised_validation": {
+    "rows": 351,
+    "visible_rows": 341,
+    "coverage": 0.9715099715099715,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 350
+  },
+  "denoise_stats": {
+    "removed_jump_count": 20,
+    "out_of_range_count": 0,
+    "interpolated_count": 38
+  },
+  "runtime_sec": 8.819353818893433
+}

@@ -1,0 +1,39 @@
+{
+  "video_id": "7",
+  "rally_id": "19",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/07 - Kento_MOMOTA_CHOU_Tien_Chen_Malaysia_Open_2018_QuarterFinals.mp4",
+  "start_frame": 31100,
+  "end_frame": 31900,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 102329,
+  "decoder": "ffmpeg",
+  "processed_frames": 801,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/7/19_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/7/19_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 801,
+    "visible_rows": 732,
+    "coverage": 0.9138576779026217,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 800
+  },
+  "denoised_validation": {
+    "rows": 801,
+    "visible_rows": 785,
+    "coverage": 0.9800249687890137,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 800
+  },
+  "denoise_stats": {
+    "removed_jump_count": 68,
+    "out_of_range_count": 0,
+    "interpolated_count": 121
+  },
+  "runtime_sec": 19.161174774169922
+}

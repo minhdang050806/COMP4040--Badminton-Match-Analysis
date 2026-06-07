@@ -1,0 +1,39 @@
+{
+  "video_id": "22",
+  "rally_id": "61",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/22 - Mia_Blichfeldt_Busanan_Ongbamrungphan_YONEX_Thailand_Open_2021_QuarterFinals.mp4",
+  "start_frame": 65940,
+  "end_frame": 66120,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 100896,
+  "decoder": "opencv",
+  "processed_frames": 181,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/22/61_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/22/61_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 181,
+    "visible_rows": 177,
+    "coverage": 0.9779005524861878,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 180
+  },
+  "denoised_validation": {
+    "rows": 181,
+    "visible_rows": 167,
+    "coverage": 0.9226519337016574,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 180
+  },
+  "denoise_stats": {
+    "removed_jump_count": 19,
+    "out_of_range_count": 0,
+    "interpolated_count": 9
+  },
+  "runtime_sec": 4.240538597106934
+}

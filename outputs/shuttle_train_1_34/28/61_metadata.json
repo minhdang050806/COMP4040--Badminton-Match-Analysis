@@ -1,0 +1,39 @@
+{
+  "video_id": "28",
+  "rally_id": "61",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/28 - Viktor_Axelsen_Ng_Ka_Long_Angus_YONEX_Thailand_Open_2021_Finals.mp4",
+  "start_frame": 67380,
+  "end_frame": 68460,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 114600,
+  "decoder": "opencv",
+  "processed_frames": 1081,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/28/61_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/28/61_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 1081,
+    "visible_rows": 1048,
+    "coverage": 0.969472710453284,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 1080
+  },
+  "denoised_validation": {
+    "rows": 1081,
+    "visible_rows": 1080,
+    "coverage": 0.9990749306197965,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 1080
+  },
+  "denoise_stats": {
+    "removed_jump_count": 48,
+    "out_of_range_count": 0,
+    "interpolated_count": 80
+  },
+  "runtime_sec": 22.151007652282715
+}

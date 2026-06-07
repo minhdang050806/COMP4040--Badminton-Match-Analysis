@@ -1,0 +1,38 @@
+{
+  "video_id": "41",
+  "rally_id": "61",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/41 - Ng_Ka_Long_Angus_Kidambi_Srikanth_HSBC_BWF_WORLD_TOUR_FINALS_2020_QuarterFinals.mp4",
+  "start_frame": 61590,
+  "end_frame": 62250,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 133950,
+  "processed_frames": 661,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle/41/61_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle/41/61_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 661,
+    "visible_rows": 596,
+    "coverage": 0.9016641452344932,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 660
+  },
+  "denoised_validation": {
+    "rows": 661,
+    "visible_rows": 610,
+    "coverage": 0.9228441754916793,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 660
+  },
+  "denoise_stats": {
+    "removed_jump_count": 59,
+    "out_of_range_count": 0,
+    "interpolated_count": 73
+  },
+  "runtime_sec": 15.103742599487305
+}

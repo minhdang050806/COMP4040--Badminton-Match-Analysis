@@ -1,0 +1,39 @@
+{
+  "video_id": "27",
+  "rally_id": "56",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/27 - Viktor_Axelsen_Anthony_Sinisuka_Ginting_YONEX_Thailand_Open_2021_SemiFinals.mp4",
+  "start_frame": 63060,
+  "end_frame": 63480,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 140250,
+  "decoder": "opencv",
+  "processed_frames": 421,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/27/56_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/27/56_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 421,
+    "visible_rows": 412,
+    "coverage": 0.9786223277909739,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 420
+  },
+  "denoised_validation": {
+    "rows": 421,
+    "visible_rows": 414,
+    "coverage": 0.9833729216152018,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 420
+  },
+  "denoise_stats": {
+    "removed_jump_count": 46,
+    "out_of_range_count": 0,
+    "interpolated_count": 48
+  },
+  "runtime_sec": 8.971530675888062
+}

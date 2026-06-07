@@ -1,0 +1,39 @@
+{
+  "video_id": "19",
+  "rally_id": "84",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/19 - Viktor_AXELSEN_CHEN_Long_Malaysia_Masters_2020_QuarterFinals.mp4",
+  "start_frame": 78400,
+  "end_frame": 78725,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 120864,
+  "decoder": "opencv",
+  "processed_frames": 326,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/19/84_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/19/84_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 326,
+    "visible_rows": 237,
+    "coverage": 0.7269938650306749,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 325
+  },
+  "denoised_validation": {
+    "rows": 326,
+    "visible_rows": 275,
+    "coverage": 0.843558282208589,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 325
+  },
+  "denoise_stats": {
+    "removed_jump_count": 21,
+    "out_of_range_count": 0,
+    "interpolated_count": 59
+  },
+  "runtime_sec": 6.317087173461914
+}

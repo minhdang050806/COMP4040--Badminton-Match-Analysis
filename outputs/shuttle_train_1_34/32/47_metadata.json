@@ -1,0 +1,39 @@
+{
+  "video_id": "32",
+  "rally_id": "47",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/32 - Hans-Kristian_Solberg_Vittinghus_Lee_Cheuk_Yu_TOYOTA_THAILAND_OPEN_2021_QuarterFinals.mp4",
+  "start_frame": 67770,
+  "end_frame": 68550,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 157050,
+  "decoder": "opencv",
+  "processed_frames": 781,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/32/47_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/32/47_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 781,
+    "visible_rows": 765,
+    "coverage": 0.9795134443021767,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 780
+  },
+  "denoised_validation": {
+    "rows": 781,
+    "visible_rows": 764,
+    "coverage": 0.9782330345710627,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 780
+  },
+  "denoise_stats": {
+    "removed_jump_count": 70,
+    "out_of_range_count": 0,
+    "interpolated_count": 69
+  },
+  "runtime_sec": 16.346649885177612
+}

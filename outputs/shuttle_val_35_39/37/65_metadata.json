@@ -1,0 +1,39 @@
+{
+  "video_id": "37",
+  "rally_id": "65",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/37 - Viktor_Axelsen_Hans_Kristian_Solberg_VIittinghus_TOYOTA_THAILAND_OPEN_2021_Finals.mp4",
+  "start_frame": 83700,
+  "end_frame": 83790,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 104399,
+  "decoder": "opencv",
+  "processed_frames": 91,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_val_35_39/37/65_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_val_35_39/37/65_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 91,
+    "visible_rows": 89,
+    "coverage": 0.978021978021978,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 90
+  },
+  "denoised_validation": {
+    "rows": 91,
+    "visible_rows": 90,
+    "coverage": 0.989010989010989,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 90
+  },
+  "denoise_stats": {
+    "removed_jump_count": 29,
+    "out_of_range_count": 0,
+    "interpolated_count": 30
+  },
+  "runtime_sec": 3.5322818756103516
+}

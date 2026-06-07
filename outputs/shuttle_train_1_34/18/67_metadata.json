@@ -1,0 +1,39 @@
+{
+  "video_id": "18",
+  "rally_id": "67",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/18 - Viktor_AXELSEN_SHI_Yu_Qi_All_England_Open_2020_QuarterFinals.mp4",
+  "start_frame": 61700,
+  "end_frame": 61850,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 75305,
+  "decoder": "opencv",
+  "processed_frames": 151,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/18/67_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/18/67_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 151,
+    "visible_rows": 32,
+    "coverage": 0.2119205298013245,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 150
+  },
+  "denoised_validation": {
+    "rows": 151,
+    "visible_rows": 41,
+    "coverage": 0.271523178807947,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 150
+  },
+  "denoise_stats": {
+    "removed_jump_count": 8,
+    "out_of_range_count": 0,
+    "interpolated_count": 17
+  },
+  "runtime_sec": 3.331563949584961
+}

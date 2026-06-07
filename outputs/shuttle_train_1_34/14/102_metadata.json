@@ -1,0 +1,39 @@
+{
+  "video_id": "14",
+  "rally_id": "102",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/14 - Anders_ANTONSEN_Jonatan_CHRISTIE Indonesia_Masters_2020_QuarterFinals.mp4",
+  "start_frame": 103150,
+  "end_frame": 103450,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 120939,
+  "decoder": "opencv",
+  "processed_frames": 301,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/14/102_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/14/102_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 301,
+    "visible_rows": 217,
+    "coverage": 0.7209302325581395,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 300
+  },
+  "denoised_validation": {
+    "rows": 301,
+    "visible_rows": 185,
+    "coverage": 0.6146179401993356,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 300
+  },
+  "denoise_stats": {
+    "removed_jump_count": 96,
+    "out_of_range_count": 0,
+    "interpolated_count": 64
+  },
+  "runtime_sec": 6.3985912799835205
+}

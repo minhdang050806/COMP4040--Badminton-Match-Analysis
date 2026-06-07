@@ -1,0 +1,39 @@
+{
+  "video_id": "6",
+  "rally_id": "15",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/06 - Kento_MOMOTA_CHOU_Tien_Chen_Denmark_Open_2018_Finals.mp4",
+  "start_frame": 24050,
+  "end_frame": 24500,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 151301,
+  "decoder": "opencv",
+  "processed_frames": 451,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/6/15_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/6/15_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 451,
+    "visible_rows": 432,
+    "coverage": 0.9578713968957872,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 450
+  },
+  "denoised_validation": {
+    "rows": 451,
+    "visible_rows": 450,
+    "coverage": 0.9977827050997783,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 450
+  },
+  "denoise_stats": {
+    "removed_jump_count": 25,
+    "out_of_range_count": 0,
+    "interpolated_count": 43
+  },
+  "runtime_sec": 11.14913034439087
+}

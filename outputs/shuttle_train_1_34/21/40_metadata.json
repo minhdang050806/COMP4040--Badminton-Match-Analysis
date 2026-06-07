@@ -1,0 +1,39 @@
+{
+  "video_id": "21",
+  "rally_id": "40",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/21 - An_Se_Young_Ratchanok_Intanon_YONEX_Thailand_Open_2021_QuarterFinals.mp4",
+  "start_frame": 44460,
+  "end_frame": 44850,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 100349,
+  "decoder": "opencv",
+  "processed_frames": 391,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/21/40_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/21/40_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 391,
+    "visible_rows": 365,
+    "coverage": 0.9335038363171355,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 390
+  },
+  "denoised_validation": {
+    "rows": 391,
+    "visible_rows": 352,
+    "coverage": 0.9002557544757033,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 390
+  },
+  "denoise_stats": {
+    "removed_jump_count": 70,
+    "out_of_range_count": 0,
+    "interpolated_count": 57
+  },
+  "runtime_sec": 8.253323078155518
+}

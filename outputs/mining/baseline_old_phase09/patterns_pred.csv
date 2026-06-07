@@ -1,0 +1,121 @@
+n,pattern,support_count,support_frac
+2,none -> none,355,0.90793
+2,Top_rush -> none,199,0.50895
+2,Bottom_rush -> none,198,0.50639
+2,none -> Top_rush,187,0.47826
+2,none -> Bottom_rush,170,0.43478
+2,Top_rush -> Top_rush,111,0.28389
+2,Bottom_rush -> Top_rush,83,0.21228
+2,Bottom_rush -> Bottom_rush,81,0.20716
+2,Top_rush -> Bottom_rush,76,0.19437
+2,none -> Bottom_return net,64,0.16368
+2,Top_smash -> none,54,0.13811
+2,Bottom_return net -> none,54,0.13811
+2,Bottom_long service -> none,51,0.13043
+2,none -> Bottom_drive,44,0.11253
+2,none -> Bottom_lob,43,0.10997
+2,Top_push -> none,40,0.1023
+2,none -> Bottom_long service,39,0.09974
+2,none -> Top_drive,36,0.09207
+2,none -> Top_push,35,0.08951
+2,Bottom_drive -> none,31,0.07928
+2,Bottom_lob -> none,30,0.07673
+2,Bottom_lob -> Top_rush,26,0.0665
+2,Top_drive -> none,26,0.0665
+2,Bottom_return net -> Top_rush,25,0.06394
+2,Top_rush -> Top_smash,23,0.05882
+2,none -> Top_smash,23,0.05882
+2,Bottom_lob -> Top_smash,22,0.05627
+2,Top_rush -> Bottom_return net,22,0.05627
+2,Bottom_net shot -> Top_rush,20,0.05115
+2,Bottom_return net -> Bottom_rush,20,0.05115
+2,Bottom_rush -> Top_push,19,0.04859
+2,Bottom_rush -> Bottom_lob,19,0.04859
+2,Bottom_drive -> Top_rush,19,0.04859
+2,Top_push -> Bottom_rush,19,0.04859
+2,Bottom_rush -> Bottom_return net,18,0.04604
+2,none -> Bottom_push,16,0.04092
+2,Bottom_push -> none,16,0.04092
+2,none -> Top_long service,14,0.03581
+2,Bottom_lob -> Bottom_long service,14,0.03581
+2,Bottom_rush -> Bottom_net shot,14,0.03581
+3,none -> none -> none,310,0.79284
+3,Bottom_rush -> none -> none,137,0.35038
+3,Top_rush -> none -> none,131,0.33504
+3,none -> none -> Top_rush,121,0.30946
+3,none -> none -> Bottom_rush,115,0.29412
+3,none -> Bottom_rush -> none,105,0.26854
+3,none -> Top_rush -> none,100,0.25575
+3,none -> Top_rush -> Top_rush,70,0.17903
+3,Top_rush -> Top_rush -> none,69,0.17647
+3,Top_rush -> Top_rush -> Top_rush,46,0.11765
+3,Bottom_rush -> Bottom_rush -> none,46,0.11765
+3,Top_rush -> Bottom_rush -> none,39,0.09974
+3,Top_rush -> none -> Top_rush,37,0.09463
+3,Bottom_long service -> none -> none,36,0.09207
+3,none -> Bottom_rush -> Bottom_rush,35,0.08951
+3,none -> none -> Bottom_return net,33,0.0844
+3,Bottom_rush -> Bottom_rush -> Bottom_rush,31,0.07928
+3,Bottom_rush -> Top_rush -> Top_rush,31,0.07928
+3,none -> Bottom_return net -> none,31,0.07928
+3,Top_smash -> none -> none,30,0.07673
+3,Bottom_rush -> Top_rush -> none,30,0.07673
+3,Bottom_return net -> none -> none,29,0.07417
+3,Bottom_rush -> none -> Bottom_rush,27,0.06905
+3,none -> none -> Bottom_drive,24,0.06138
+3,none -> Top_rush -> Bottom_rush,24,0.06138
+3,none -> Bottom_rush -> Top_rush,23,0.05882
+3,none -> none -> Bottom_long service,23,0.05882
+3,Top_rush -> Top_rush -> Bottom_rush,22,0.05627
+3,Top_rush -> none -> Bottom_rush,22,0.05627
+3,none -> Bottom_long service -> none,22,0.05627
+3,Bottom_lob -> none -> none,22,0.05627
+3,none -> none -> Bottom_lob,21,0.05371
+3,none -> none -> Top_drive,21,0.05371
+3,Top_push -> none -> none,20,0.05115
+3,none -> Bottom_drive -> none,19,0.04859
+3,Top_rush -> Bottom_rush -> Top_rush,19,0.04859
+3,Bottom_rush -> none -> Top_rush,18,0.04604
+3,none -> none -> Top_smash,18,0.04604
+3,Bottom_drive -> none -> none,18,0.04604
+3,Bottom_rush -> Top_rush -> Bottom_rush,18,0.04604
+4,none -> none -> none -> none,237,0.60614
+4,Bottom_rush -> none -> none -> none,98,0.25064
+4,none -> none -> none -> Top_rush,83,0.21228
+4,Top_rush -> none -> none -> none,82,0.20972
+4,none -> none -> none -> Bottom_rush,72,0.18414
+4,none -> Bottom_rush -> none -> none,72,0.18414
+4,none -> none -> Bottom_rush -> none,66,0.1688
+4,none -> none -> Top_rush -> none,61,0.15601
+4,none -> Top_rush -> none -> none,57,0.14578
+4,Top_rush -> Top_rush -> none -> none,40,0.1023
+4,none -> none -> Top_rush -> Top_rush,39,0.09974
+4,none -> Top_rush -> Top_rush -> none,33,0.0844
+4,Top_rush -> Bottom_rush -> none -> none,28,0.07161
+4,none -> Top_rush -> Top_rush -> Top_rush,27,0.06905
+4,Top_rush -> Top_rush -> Top_rush -> none,27,0.06905
+4,Top_smash -> none -> none -> none,24,0.06138
+4,Bottom_long service -> none -> none -> none,23,0.05882
+4,none -> none -> none -> Bottom_return net,23,0.05882
+4,Bottom_rush -> Bottom_rush -> none -> none,22,0.05627
+4,Top_rush -> none -> none -> Top_rush,20,0.05115
+4,none -> none -> Bottom_rush -> Bottom_rush,19,0.04859
+4,none -> none -> none -> Bottom_drive,19,0.04859
+4,Top_rush -> none -> Top_rush -> none,19,0.04859
+4,Bottom_rush -> Top_rush -> none -> none,18,0.04604
+4,Bottom_rush -> none -> none -> Top_rush,17,0.04348
+4,none -> none -> none -> Bottom_long service,17,0.04348
+4,none -> Bottom_return net -> none -> none,17,0.04348
+4,Top_rush -> Top_rush -> Top_rush -> Top_rush,17,0.04348
+4,none -> none -> Bottom_return net -> none,16,0.04092
+4,Bottom_rush -> Bottom_rush -> Bottom_rush -> none,16,0.04092
+4,none -> none -> Top_rush -> Bottom_rush,16,0.04092
+4,none -> Top_rush -> Bottom_rush -> none,16,0.04092
+4,Top_rush -> none -> Bottom_rush -> none,15,0.03836
+4,none -> Bottom_long service -> none -> none,15,0.03836
+4,none -> none -> Bottom_long service -> none,15,0.03836
+4,Top_rush -> none -> Top_rush -> Top_rush,15,0.03836
+4,Bottom_lob -> none -> none -> none,15,0.03836
+4,none -> none -> Bottom_drive -> none,15,0.03836
+4,Bottom_rush -> none -> none -> Bottom_rush,15,0.03836
+4,Bottom_return net -> none -> none -> none,15,0.03836

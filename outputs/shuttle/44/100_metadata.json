@@ -1,0 +1,38 @@
+{
+  "video_id": "44",
+  "rally_id": "100",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/44 - Anders_Antonsen_Viktor_Axelsen_HSBC_BWF_WORLD_TOUR_FINALS_2020_Finals.mp4",
+  "start_frame": 118560,
+  "end_frame": 119070,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 144450,
+  "processed_frames": 511,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle/44/100_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle/44/100_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 511,
+    "visible_rows": 450,
+    "coverage": 0.8806262230919765,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 510
+  },
+  "denoised_validation": {
+    "rows": 511,
+    "visible_rows": 504,
+    "coverage": 0.9863013698630136,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 510
+  },
+  "denoise_stats": {
+    "removed_jump_count": 62,
+    "out_of_range_count": 0,
+    "interpolated_count": 116
+  },
+  "runtime_sec": 11.445438385009766
+}

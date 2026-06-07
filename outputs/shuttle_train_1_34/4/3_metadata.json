@@ -1,0 +1,39 @@
+{
+  "video_id": "4",
+  "rally_id": "3",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/04 - CHEN_Long_CHOU_Tien_Chen_Denmark_Open_2019_QuarterFinal.mp4",
+  "start_frame": 10325,
+  "end_frame": 10750,
+  "fps": 25.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 103476,
+  "decoder": "ffmpeg",
+  "processed_frames": 426,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle_train_1_34/4/3_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle_train_1_34/4/3_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 426,
+    "visible_rows": 348,
+    "coverage": 0.8169014084507042,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 425
+  },
+  "denoised_validation": {
+    "rows": 426,
+    "visible_rows": 369,
+    "coverage": 0.8661971830985915,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 425
+  },
+  "denoise_stats": {
+    "removed_jump_count": 35,
+    "out_of_range_count": 0,
+    "interpolated_count": 56
+  },
+  "runtime_sec": 17.640530586242676
+}

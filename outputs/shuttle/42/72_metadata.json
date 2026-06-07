@@ -1,0 +1,38 @@
+{
+  "video_id": "42",
+  "rally_id": "72",
+  "source_video": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/project/dataset/ShuttleSet_raw_videos/42 - Pusarla_V._Sindhu_Pornpawee_Chochuwong_HSBC_BWF_WORLD_TOUR_FINALS_2020_QuarterFinals.mp4",
+  "start_frame": 72780,
+  "end_frame": 75030,
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "frame_count": 99150,
+  "processed_frames": 2251,
+  "device": "cuda:1",
+  "model_file": "/home/dang.cpm/__MY_SPACE__/VinUni/Data-Mining/external_repos/TrackNetV3/exp/model_best.pt",
+  "raw_csv": "project/outputs/shuttle/42/72_ball_raw.csv",
+  "denoised_csv": "project/outputs/shuttle/42/72_ball_denoised.csv",
+  "raw_validation": {
+    "rows": 2251,
+    "visible_rows": 2204,
+    "coverage": 0.9791203909373611,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 2250
+  },
+  "denoised_validation": {
+    "rows": 2251,
+    "visible_rows": 2212,
+    "coverage": 0.9826743669480231,
+    "out_of_range_visible_rows": 0,
+    "first_frame": 0,
+    "last_frame": 2250
+  },
+  "denoise_stats": {
+    "removed_jump_count": 385,
+    "out_of_range_count": 0,
+    "interpolated_count": 393
+  },
+  "runtime_sec": 52.194802045822144
+}
