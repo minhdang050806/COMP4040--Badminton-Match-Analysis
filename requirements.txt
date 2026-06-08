@@ -1,0 +1,20 @@
+# Core scientific stack
+numpy
+pandas
+scikit-learn
+
+# Deep learning (stroke transformer, SA-CNN, pose) — install the build matching
+# your CUDA version from https://pytorch.org if you need GPU support.
+torch
+torchvision
+
+# Computer vision
+opencv-python
+Pillow
+
+# Plotting / figures
+matplotlib
+seaborn
+
+# Testing
+pytest

@@ -1,0 +1,171 @@
+\documentclass[11pt,twocolumn,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{titlesec}
+\usepackage{lastpage}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs,multirow,tabularx,array}
+% \usepackage{tikz}
+% \usetikzlibrary{arrows.meta,positioning,fit,calc,shapes.geometric,backgrounds}
+\usepackage{cite}
+\usepackage{microtype}
+\usepackage{float}
+\usepackage{abstract}
+\usepackage{balance}
+\usepackage{dblfloatfix}
+\usepackage{url}
+
+% ---------- Hyperlinks ----------
+\usepackage[
+    colorlinks=true,
+    allcolors=blue,
+    pdfborder={0 0 1}
+]{hyperref}
+
+% ---------- Custom Commands ----------
+\newcommand{\appname}{\textsc{AI Conference Research Observatory}}
+\newcommand{\datasetname}{\textsc{NeurIPS-39}}
+% System name used throughout the paper. Rename here to rebrand everywhere.
+\newcommand{\method}{\textsc{BadmintonMine}}
+
+% ---------- Colors ----------
+\definecolor{NavyHead}{RGB}{24,50,82}
+\definecolor{SteelSub}{RGB}{58,86,120}
+\definecolor{DarkRed}{RGB}{140,45,45}
+\definecolor{SoftCoral}{RGB}{214,104,83}
+\definecolor{CreamBox}{RGB}{255,249,237}
+
+% ---------- Page Geometry ----------
+\geometry{
+    a4paper,
+    margin=0.65in,
+    columnsep=0.25in
+}
+
+% ---------- Paragraph and List Formatting ----------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlist[itemize]{leftmargin=1.2em,itemsep=0.1em,topsep=0.15em}
+\setlist[enumerate]{leftmargin=1.4em,itemsep=0.1em,topsep=0.15em}
+\renewcommand{\arraystretch}{1.12}
+
+% ---------- Abstract Formatting ----------
+\renewcommand{\abstractnamefont}{\normalfont\large\bfseries}
+\renewcommand{\abstracttextfont}{\normalfont\small}
+\setlength{\absleftindent}{0pt}
+\setlength{\absrightindent}{0pt}
+
+% ---------- Section Formatting ----------
+\titleformat{\section}
+  {\color{NavyHead}\large\bfseries}
+  {\thesection.}{0.5em}{}
+  [{\vspace{-3pt}\color{DarkRed}\rule{\columnwidth}{0.8pt}}]
+\titleformat{\subsection}
+  {\color{SteelSub}\normalsize\bfseries}
+  {\thesubsection.}{0.5em}{}
+\titlespacing{\section}{0pt}{0.7em}{0.35em}
+\titlespacing{\subsection}{0pt}{0.55em}{0.2em}
+
+% ---------- Header/Footer ----------
+\newcommand{\VinLogo}{\includegraphics[scale=0.11]{figures/VinUni_logo.png}}
+\newcommand{\CommonFooter}{
+    \fancyfoot[L]{COMP4040 Data Mining and Big Data Analytics}
+    \fancyfoot[C]{}
+    \fancyfoot[R]{\thepage/\pageref{LastPage}}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\VinLogo}
+\fancyhead[R]{\footnotesize College of Engineering and Computer Science \\ VinUniversity, Hanoi, Vietnam}
+\CommonFooter
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancypagestyle{firstpage}{
+    \fancyhf{}
+    \fancyhead[L]{\VinLogo}
+    \fancyhead[R]{\footnotesize College of Engineering and Computer Science \\ VinUniversity, Hanoi, Vietnam}
+    \CommonFooter
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+}
+
+% ---------- Title ----------
+\title{\bfseries\LARGE An Integrated Badminton Analytics and
+\\ Data-Mining Pipeline}
+
+\author{\normalsize
+\bf Cao Pham Minh Dang, Pham Dinh Hieu, Pham Minh Hieu \\[0.2em]
+\small College of Engineering and Computer Science, VinUniversity, Vietnam\\
+\texttt{\{24dang.cpm, 24hieu.pd, 22hieu.pm\}@vinuni.edu.vn} \\
+\small Github Repository: \href{https://github.com/minhdang050806/COMP4040--Badminton-Match-Analysis}{Link} \quad
+}
+\date{}
+
+\begin{document}
+
+\twocolumn[
+\maketitle
+\thispagestyle{firstpage}
+
+\begin{abstract}    
+Badminton broadcasts encode rich tactical information---stroke choices, rally
+structure, and player movement---yet this information exists as pixels rather
+than structured data. Recovering it requires a multi-stage perception chain:
+isolating rally footage, tracking the shuttle, localizing both players,
+identifying hit moments, and classifying fine-grained stroke types into ordered
+rally sequences, where errors at any stage can corrupt downstream tactical
+analysis. We present \method, an integrated badminton video analytics and
+data-mining pipeline that couples SA-CNN rally filtering, TrackNetV3 shuttle
+tracking, YOLO-pose player extraction, court normalization, and a fine-tuned
+Badminton-Stroke Transformer. This output feeds five tactical mining analyses:
+stroke composition, Markov transitions, frequent motif discovery, movement
+profiling, and strategy clustering. Evaluated on unseen ShuttleSet videos~41--44,
+the system yields 3{,}178 evaluated stroke predictions at 69.04\% side-aware
+top-1 accuracy and 66.64\% macro-F1. The key result is that \emph{sequence
+coherence} matters more than per-stroke accuracy for mining: reducing the
+predicted \textit{none} rate from 56.43\% to 6.70\% lowers transition-matrix
+error and recovers a coherent attack--defence grammar around net shots, lifts,
+smashes, and defensive replies. Crucially, we validate the \emph{mining}, not
+just the perception: running every analysis on matched ground-truth labels for
+the same events shows that predicted composition (KL $0.04$), motif rankings
+(Spearman $0.66$), and transition structure (Frobenius $1.23$, below unigram and
+random baselines) all track the truth, while clustering is faithful at the
+feature level ($\bar{r}=0.79$) but only descriptive at the assignment level
+(ARI $0.17$). Our analyses provide intuitive match-level summaries, shot-response
+tendencies, recurring tactical phrases, spatial movement patterns, and
+high-level strategy groupings.
+\footnote{Code repository: \url{https://github.com/minhdang050806/COMP4040--Badminton-Match-Analysis}}
+\end{abstract}
+
+\vspace{0.8em}
+]
+
+\input{src/01_introduction}
+
+\input{src/02_related_work}
+
+\input{src/03_dataset}
+
+\input{src/04_modeling}
+
+\input{src/05_tatical_data_mining}
+
+\input{src/06_discussion}
+
+\input{src/07_limitation}
+
+\input{src/08_conclusion}
+
+\bibliographystyle{plain}
+\bibliography{reference}
+
+
+\end{document}

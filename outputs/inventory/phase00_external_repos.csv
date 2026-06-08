@@ -1,6 +1,0 @@
-exists,git_head,is_dir,is_file,path,role,sha256,size_bytes
-True,2ef1797,True,False,external_repos/BST-Badminton-Stroke-type-Transformer,BST code and data-prep scripts,,
-True,d1d96f3,True,False,external_repos/TrackNetV3,shuttle tracking and hit-frame scripts,,
-True,af7722384,True,False,external_repos/Automated-Hit-frame-Detection-for-Badminton-Match-Analysis,SA-CNN rally filtering source,,
-True,39e9227,True,False,external_repos/monotrack,court detection source,,
-True,759b39c1,True,False,external_repos/mmpose,pose estimation source,,

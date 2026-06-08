@@ -1,0 +1,121 @@
+%-----------------------------------------------------------------------
+\section{Modeling}
+%-----------------------------------------------------------------------
+
+Table~\ref{tab:components} provides a consolidated summary of key metrics across
+the perception stages. Rather than presenting exhaustive implementation details,
+we highlight the aspects that most affect downstream analysis.
+
+\begin{table*}[t]
+  \caption{Per-stage performance metrics across the \method{} pipeline.}
+  \label{tab:components}
+  \centering
+  \small
+  \begin{tabular}{llr}
+    \toprule
+    Component & Metric & Result \\
+    \midrule
+    SA-CNN rally filtering & Validation F1 & 0.903 \\
+    SA-CNN & Annotated-hit coverage & 97.32\% \\
+    TrackNetV3 tracking & Visible-frame coverage (denoised) & 90.99\% \\
+    BST classifier & Validation macro-F1 & 0.805 \\
+    YOLO-pose features & Top / Bottom pose-valid rate & 54.29\% / 98.96\% \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+\paragraph{Rally Scene Filtering.}
+SA-CNN is a binary classifier that separates court-view frames from non-play
+footage—score screens, replays, crowd shots. Trained on 20k labelled images, it
+achieves an F1 score of 0.903 and retains 97.32\% of annotated hits, ensuring
+that shuttle tracking is not run on irrelevant frames.
+
+\paragraph{Shuttle Tracking.}
+TrackNetV3 predicts frame-level shuttle coordinates. Post-processing removes
+implausible jumps and interpolates short gaps, achieving a denoised visible
+coverage of 90.99\%. Representative trajectories are coherent across rally
+frames, although some noise near rally boundaries underscores the need for
+precise filtering.
+
+\paragraph{Pose Estimation.}
+YOLO-pose extracts body keypoints and positions for both players in each window.
+Valid keypoints are obtained for 98.96\% of near-side frames, but only 54.29\%
+for far-side frames. This asymmetry proves to be the main bottleneck: when the
+far-side pose is absent, classification accuracy drops sharply.
+
+\paragraph{Stroke Classification.}
+The Badminton-Stroke Transformer (\texttt{BST\_CG\_AP}) is fine-tuned on
+ShuttleSet training clips. On the clean unseen set, it achieves 69.04\%
+side-aware top-1 accuracy and 66.64\% macro-F1 across 3{,}178 evaluated strokes.
+Player-side accuracy reaches 93.05\%, indicating that the model reliably
+identifies which side struck the shuttle even when stroke-type distinctions are
+confused.  The pipeline’s principal improvement over earlier versions is the
+dramatic reduction of \texttt{none} predictions, from 56.43\% to 6.70\%, which
+restores sequential coherence and is critical for the mining analyses.
+
+Table~\ref{tab:per_video} breaks down results across the four held-out
+matches. Accuracy ranges from 53.3\% (Video~43, Marin vs.\ Chochuwong
+SF) to 76.6\% (Video~44, Antonsen vs.\ Axelsen Finals), a 23-point
+spread that reflects match-level variation in broadcast angle and
+far-side player visibility. The Finals match (Video~44) benefits from
+more consistent near-court exchanges, whereas the semi-final
+(Video~43) involves more aggressive backcourt play, compounding
+far-side pose errors. Video~41 serves as the reference split used for
+validation during training; it is included here only for completeness.
+
+\begin{table}[t]
+  \caption{Per-video stroke-classification results on the held-out
+  unseen set (videos~41--44). Top-3 accuracy counts a prediction
+  correct if the true label appears among the model’s three highest
+  scoring classes.}
+  \label{tab:per_video}
+  \centering
+  \small
+  \begin{tabular}{clrrrr}
+    \toprule
+    Video & Match (BWF WTF 2020) & $n$ & Top-1 & Top-3 & Macro-F1 \\
+    \midrule
+    41 & Ng Ka Long vs.\ Srikanth (QF)  & 1{,}151 & 73.7\% & 90.4\% & 0.723 \\
+    42 & Sindhu vs.\ Chochuwong (QF)    &   619   & 64.0\% & 85.1\% & 0.612 \\
+    43 & Marin vs.\ Chochuwong (SF)     &   550   & 53.3\% & 74.2\% & 0.478 \\
+    44 & Antonsen vs.\ Axelsen (Finals) &   858   & 76.6\% & 95.2\% & 0.725 \\
+    \midrule
+    \textbf{All} & & \textbf{3{,}178} & \textbf{69.0\%} & \textbf{87.9\%} & \textbf{0.664} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Table~\ref{tab:top_confusions} lists the most frequent stroke-type
+confusion pairs on the test set (side-agnostic). The dominant errors
+cluster around \emph{net-zone strokes}: net shot is confused with return
+net (89 times) and predicted as \texttt{none} (84 times), and lob is
+confused with push (93 times). These three pairs alone account for
+266~of the 984 total errors. Crucially, net~shot and return~net are
+tactically adjacent---both are soft forecourt exchanges---and are
+visually similar when the far-side player is absent or blurred.
+The smash$\leftrightarrow$drop confusion (55+49) reflects the shared
+overhead mechanics and limited shuttle visibility at the contact point.
+
+\begin{table}[t]
+  \caption{Top stroke-type confusion pairs on the 3{,}178-event unseen
+  set (side-agnostic; \texttt{none} pairs included where notable).
+  Each row is one confusion direction; the symmetric counterpart is
+  listed separately when it is also a top error.}
+  \label{tab:top_confusions}
+  \centering
+  \small
+  \begin{tabular}{llr}
+    \toprule
+    True stroke & Predicted as & Errors \\
+    \midrule
+    lob         & push              & 93 \\
+    net shot    & return net        & 89 \\
+    net shot    & \texttt{none}     & 84 \\
+    drop        & smash             & 55 \\
+    smash       & drop              & 49 \\
+    push        & lob               & 44 \\
+    return net  & drive             & 36 \\
+    lob         & clear             & 35 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

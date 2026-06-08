@@ -1,6 +1,0 @@
-exists,is_dir,is_file,path,pt_file_count,role,sha256,size_bytes
-True,False,True,external_repos/Automated-Hit-frame-Detection-for-Badminton-Match-Analysis/src/models/weights/sacnn.pt,,Phase 05 rally / shot-angle filtering,e29e7b11c5e308bcaddaee03633ae64da04d01fdf254a0216a71bfb1807c1653,346656
-True,False,True,external_repos/Automated-Hit-frame-Detection-for-Badminton-Match-Analysis/src/models/weights/scaler.pickle,,legacy Automated-Hit-frame pipeline scaler; not needed for standalone SA-CNN,eb8bf8b0353441db52123a348ca78c6875aef244c0e048fd8efeb6bb03b3b603,2090
-True,False,True,external_repos/TrackNetV3/exp/model_best.pt,,Phase 06 shuttle tracking,ff3fc5687cc83cda19095116881d564ed7fe60de3d013fd4d6a801e88299dc68,181830533
-True,False,True,project/weights/on_ShuttleSet/bst_CG_AP_JnB_bone_between_2_hits_with_max_limits_seq_100_merged_2.pt,,Phase 04 / Phase 10 BST_CG_AP stroke classification,997f43e52b20cb47517132c71d3e147d7d717a2d9651cfbe7651a5003bd66809,7514133
-True,True,False,project/weights/on_ShuttleSet,51,all local ShuttleSet BST/baseline weights,,

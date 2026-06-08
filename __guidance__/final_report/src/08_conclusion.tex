@@ -1,0 +1,43 @@
+\section*{Contribution Declaration}
+
+\begin{table}[h]
+  \centering\small
+  \setlength{\tabcolsep}{5pt}
+  \renewcommand{\arraystretch}{1.2}
+  \caption*{\textbf{Individual Contribution Split (\%)}}
+  \begin{tabular}{lccc}
+    \toprule
+    \textbf{Task} & \textbf{Dang} & \textbf{Hieu (pd)} & \textbf{Hieu (pm)} \\
+    \midrule
+    Data preparation         & 20 & 50 & 30 \\
+    Model integration        & 40 & 35 & 25 \\
+    Experimentation          & 30 & 40 & 30 \\
+    Tactical analysis        & 55 & 15 & 30 \\
+    Visualisation            & 25 & 20 & 55 \\
+    Manuscript writing       & 35 & 35 & 30 \\
+    \midrule
+    \textbf{Overall}         & \textbf{34} & \textbf{33} & \textbf{33} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Conclusion}
+
+We presented \method, an integrated badminton video analytics and data-mining
+system linking rally filtering, shuttle tracking, player pose extraction,
+court-normalized feature construction, stroke classification, and five
+interpretable mining analyses. On unseen ShuttleSet videos~41--44, the clean
+evaluation achieves 69.04\% side-aware top-1 accuracy and 87.89\% top-3
+accuracy (top-3 measures whether the correct stroke falls within the
+model's three highest-scoring classes, a relevant threshold because the
+dominant errors involve tactically adjacent strokes---net shot, return
+net, and push---that are visually similar and occupy the same forecourt
+zone). More importantly, the predicted \texttt{none} rate falls to 6.70\%
+and transition-matrix error decreases substantially relative to earlier
+baselines, allowing the recovered stroke stream to capture a coherent
+attack–defence grammar of net pressure, forced lifts, attacking smashes, and
+defensive replies. The five analyses—distributions, transitions, motifs,
+movement profiles, and clustering—provide complementary evidence that the
+pipeline produces a readable tactical narrative from raw video. The clearest
+path forward is to improve far-side player detection and automate the steps
+currently supplied by annotations.

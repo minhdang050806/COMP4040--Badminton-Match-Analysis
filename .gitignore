@@ -1,0 +1,85 @@
+# ---------------------------------------------------------------------------
+# Datasets, weights, and generated pipeline artifacts (never committed)
+# ---------------------------------------------------------------------------
+# Raw data / media
+dataset/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.jpg
+*.jpeg
+
+# Model weights and checkpoints
+weights/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.engine
+
+# Generated pipeline outputs (CSV / JSON / NPY / figures produced by tools/)
+outputs/
+
+# Numpy / tensor arrays
+*.npy
+*.npz
+
+# Logs
+*.log
+logs/
+
+# ---------------------------------------------------------------------------
+# Keep tracked report/figure assets (overrides the broad media rules above)
+# ---------------------------------------------------------------------------
+!__guidance__/images/
+!__guidance__/images/**
+!__guidance__/final_report/images/
+!__guidance__/final_report/images/**
+!__guidance__/final_report/figures/
+!__guidance__/final_report/figures/**
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# ---------------------------------------------------------------------------
+# Editor / OS
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---------------------------------------------------------------------------
+# LaTeX build artifacts
+# ---------------------------------------------------------------------------
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.log

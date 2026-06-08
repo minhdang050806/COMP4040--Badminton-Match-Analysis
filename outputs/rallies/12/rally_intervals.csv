@@ -1,2 +1,0 @@
-video_id,match_id,rally_interval_id,start_frame,end_frame,start_time_sec,end_time_sec,duration_sec,sample_count,accepted,reject_reason
-12,12,1,8280,77340,138.138,1290.289,1152.151,1151,False,too_long

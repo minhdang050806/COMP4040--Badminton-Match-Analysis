@@ -1,0 +1,124 @@
+%-----------------------------------------------------------------------
+\section{Related Work}
+%-----------------------------------------------------------------------
+
+\paragraph{Badminton datasets.}  ShuttleSet provides broadcast videos, set-level
+annotations, stroke labels, homography information, and pre-extracted features
+for badminton analysis \cite{shuttleset}. Its paired structure—raw video
+alongside structured labels—makes it well suited to evaluating how much tactical
+information survives end-to-end prediction from video. BadmintonDB focuses on
+player-specific match analysis and outcome prediction \cite{badmintondb}.
+Recently, the FineBadminton project introduced a large-scale dataset with a
+multi-level annotation hierarchy ranging from low-level actions to decision
+evaluation \cite{finebadminton}. The dataset and associated FBBench benchmark
+are designed to challenge multimodal models on nuanced spatio-temporal reasoning,
+but their focus is on higher-level semantics rather than fine-grained stroke
+classification. We adopt ShuttleSet as our primary benchmark because its
+annotations support evaluation at the stroke, rally, and sequence levels
+simultaneously.
+
+\paragraph{Rally filtering, shuttle tracking, and hit detection.}
+Rally filtering separates playable footage from non-rally broadcast segments, a
+prerequisite for any downstream processing. Shuttle tracking is typically
+formulated as frame-level heatmap or coordinate prediction; TrackNetV2
+introduced an efficient network architecture for this task in badminton video
+\cite{tracknetv2}, and we build on a TrackNetV3 implementation for coordinate
+extraction and denoising. Hitting-event detection has been studied directly
+using specialized models \cite{chen2023hitting}. Recent work has also proposed
+refining shuttle hit times by combining TrackNet trajectory predictions with
+swing detection from YOLOv7 \cite{hsu2024enhancing}, improving shot extraction
+in monocular-camera settings. In the present work, exact ShuttleSet hit-frame
+labels define the unseen-video benchmark; trajectory-based hit detection
+remains the prerequisite step for fully unlabeled deployment.
+
+\paragraph{Pose estimation and stroke classification.}
+Player pose provides body keypoints and on-court position, both of which are
+necessary inputs to stroke classification. MMPose is a widely used
+pose-estimation toolbox \cite{mmpose}; our pipeline employs a YOLO-pose
+checkpoint for efficient per-window feature extraction. For stroke recognition,
+the Badminton-Stroke Transformer (BST) models racket-sport strokes jointly from
+player skeletons, positions, and shuttle kinematics \cite{chang2025bst}.
+We fine-tune the \texttt{BST\_CG\_AP} variant as the final stroke classifier.
+
+\paragraph{Sports tactic mining and immersive analysis.}
+Tactical analysis from structured event sequences is an established area in
+sports analytics. Stroke distributions characterize match composition,
+transition matrices encode sequential stroke tendencies, and frequent-sequence
+mining identifies recurring tactical phrases \cite{shuttleset}. Movement
+profiling connects spatial displacement with stroke selection. KMeans clustering
+\cite{kmeans} paired with silhouette analysis \cite{silhouette} offers a
+standard approach for profile summarization, but cluster validity must be
+confirmed through stability tests rather than visual inspection alone. Beyond
+batch analysis, immersive systems such as VIRD provide interactive 3D visual
+analytics for coaches and players by reconstructing rally scenes in virtual
+reality \cite{vird2023}. Our work differs by focusing on automated recovery of
+stroke sequences from raw video and on producing interpretable mining outputs
+from predicted event streams rather than on visualization tools.
+
+\paragraph{Positioning \method{} against prior work.}
+Table~\ref{tab:comparison} summarises how \method{} sits relative to the
+systems above across five dimensions: input modality, output, degree of
+automation, support for tactical mining, and evaluation protocol. No prior
+system simultaneously takes raw video as input, produces a structured stroke
+event stream, \emph{and} validates the downstream mining against ground truth.
+TrackNet-based systems handle the video-to-trajectory step but stop at shuttle
+coordinates. BST handles stroke classification but requires pre-extracted
+features, not raw frames. ShuttleSet's own analysis tools operate on
+ground-truth annotations rather than predicted events, providing an upper bound
+but not an end-to-end pipeline. VIRD delivers immersive visualisation but
+relies on structured input and does not address recovery from raw video.
+\method{} fills the gap between raw video and a validated tactical analysis by
+chaining these components and measuring how much tactical signal survives
+end-to-end prediction.
+
+\begin{table*}[t]
+  \caption{Qualitative comparison of related badminton analytics systems.
+  ``Partial'' automation means the system processes raw video for some stages
+  but relies on supplied metadata (hit-frame indices or homographies) for
+  others.}
+  \label{tab:comparison}
+  \centering
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.15}
+  \begin{tabular}{p{2.8cm} p{3.2cm} p{2.8cm} p{1.6cm} p{1.6cm} p{3.5cm}}
+    \toprule
+    System & Input & Output & Fully auto? & Tactical mining? & Evaluation \\
+    \midrule
+    ShuttleSet analysis \cite{shuttleset}
+      & Ground-truth stroke annotations
+      & Tactical statistics
+      & No
+      & Yes
+      & Annotation-derived; no pred-vs-truth gap \\[3pt]
+
+    BST \cite{chang2025bst}
+      & Pre-extracted features (pose, shuttle)
+      & Stroke class per window
+      & No
+      & No
+      & Classification accuracy on held-out clips \\[3pt]
+
+    TrackNet-based systems \cite{tracknetv2,hsu2024enhancing}
+      & Raw broadcast video
+      & Shuttle trajectory; hit-frame cues
+      & Partial
+      & No
+      & Tracking coverage; hit-detection F1 \\[3pt]
+
+    VIRD \cite{vird2023}
+      & Structured / visual input
+      & Interactive 3-D VR visualisation
+      & No
+      & Visualisation only
+      & User study / visual inspection \\[3pt]
+
+    \textbf{\method{} (ours)}
+      & Raw video + supplied hit indices \& homographies
+      & Stroke event stream + five mining analyses
+      & Partial
+      & Yes
+      & Pred-vs-truth mining validation (KL, Frobenius, Spearman, ARI) \\
+    \bottomrule
+  \end{tabular}
+\end{table*}

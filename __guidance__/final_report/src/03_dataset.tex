@@ -1,0 +1,129 @@
+%-----------------------------------------------------------------------
+\section{Dataset and Preprocessing}
+%-----------------------------------------------------------------------
+
+\subsection{Source and Scale}
+
+Our experiments use ShuttleSet, a badminton broadcast dataset with stroke-level
+annotations. Table~\ref{tab:data} summarizes the local snapshot: 44 raw
+broadcast videos, 104 set annotation files, 36{,}482 annotated strokes, and
+3{,}683 annotated rallies, along with six pre-extracted feature variants
+comprising 33{,}481 prepared clips each. The active BST feature variant employs
+a fixed sequence length of 100 frames. Videos~1--40 are reserved for
+development; videos~41--44 form the held-out evaluation set used throughout
+this work. While newer datasets such as FineBadminton provide richer semantic
+annotations \cite{finebadminton}, ShuttleSet remains the only public resource
+with aligned hit-frame indices, homography parameters, and stroke-level labels
+required for our pipeline.
+
+\begin{table}[t]
+  \caption{Local ShuttleSet snapshot and data split used for evaluation.}
+  \label{tab:data}
+  \centering
+  \small
+  \begin{tabular}{lr}
+    \toprule
+    Item & Count or split \\
+    \midrule
+    Raw broadcast videos & 44 \\
+    Set annotation files & 104 \\
+    Annotated strokes    & 36{,}482 \\
+    Annotated rallies    & 3{,}683 \\
+    Prepared clips per variant & 33{,}481 \\
+    Training videos      & 1--40 (train split) \\
+    Validation videos    & 1--40 (val split, model selection only) \\
+    Unseen evaluation    & 41--44 (held-out, never seen during training) \\
+    Clean unseen predictions & 3{,}178 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Data Splits and Evaluation Protocol}
+\label{sec:splits}
+
+All 44 videos originate from ShuttleSet's pre-defined splits.
+Videos~1--40 provide the \textbf{training set} (25{,}741 clips) and
+\textbf{validation set} (4{,}241 clips); the validation set is used
+\emph{only} for model selection---early stopping halted training at
+epoch~6 based on validation macro-F1.
+Videos~41--44 form the \textbf{held-out test set} (3{,}499 collated
+clips; 3{,}178 clean primary events after removing feature-alias
+duplicates). These four matches were withheld from all training, tuning,
+and threshold decisions and evaluated exactly once to produce the figures
+reported throughout this paper.
+
+\subsection{Annotations and Label Preparation}
+
+Table~\ref{tab:annotation_layers} summarizes the annotation layers used by the
+pipeline. These annotations provide the temporal, spatial, and identity
+information needed to convert raw video into ordered stroke-level examples.
+
+\begin{table*}[h]
+  \caption{Annotation layers used for feature construction, evaluation, and tactical mining.}
+  \label{tab:annotation_layers}
+  \centering
+  \small
+  \begin{tabular}{p{3.2cm} p{5.3cm} p{4.4cm}}
+    \toprule
+    Annotation layer & What it records & Role in the pipeline \\
+    \midrule
+    Stroke labels
+      & Hitter side and stroke type for each event
+      & Defines the supervised classification target \\[3pt]
+
+    Rally identifiers
+      & Rally ID and event order within each rally
+      & Builds ordered stroke sequences for transitions and motifs \\[3pt]
+
+    Hit-frame indices
+      & Video frame where each stroke occurs
+      & Anchors fixed-length stroke windows in raw video time \\[3pt]
+
+    Homography parameters
+      & Mapping from image coordinates to normalized court coordinates
+      & Supports court normalization and movement profiling \\[3pt]
+
+    Player identities
+      & Persistent player information from ShuttleSet metadata
+      & Used for evaluation and player-level movement analysis \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+The classification target contains 25 side-aware classes: one background
+\texttt{none} class, 12 Top-side stroke classes, and 12 Bottom-side stroke
+classes. Here, \emph{Top} and \emph{Bottom} are camera-relative sides, not
+persistent player identities. For example, a Top-side smash means that the
+far-court player, as seen by the broadcast camera, performed a smash.
+
+\subsection{Preprocessing Pipeline}
+
+Raw broadcasts are converted into aligned stroke windows through four sequential
+stages, summarised in Table~\ref{tab:preproc}. Rally filtering identifies active
+play segments and discards non-rally footage. Shuttle tracking predicts
+frame-level coordinates, suppresses implausible jumps, and fills short gaps.
+Window construction extracts a fixed-length frame range around each hit-frame,
+and pose extraction obtains body keypoints and positions for both players. Each
+stroke window includes four feature streams (player keypoints, positions,
+shuttle coordinates, and validity masks) that feed the stroke classifier.
+
+\begin{table*}[h]
+  \caption{Preprocessing stages with corresponding operations and outputs.}
+  \label{tab:preproc}
+  \centering
+  \small
+  \begin{tabular}{p{3.3cm} p{5.5cm} p{4.1cm}}
+    \toprule
+    Stage & Operation & Output \\
+    \midrule
+    Rally filtering
+      & Separate rally frames from non-play broadcast segments & Rally frame intervals \\
+    Shuttle tracking
+      & Predict shuttle coordinates, remove jumps, interpolate gaps & Denoised shuttle positions \\
+    Window construction
+      & Extract fixed-length frame range around each hit frame & Stroke windows \\
+    Pose extraction
+      & Extract, order, and normalize player keypoints & Player features and validity masks \\
+    \bottomrule
+  \end{tabular}
+\end{table*}

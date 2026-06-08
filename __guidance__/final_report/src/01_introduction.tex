@@ -1,0 +1,64 @@
+Badminton is a fast-paced racket sport in which rally dynamics can shift within
+a handful of exchanges. Coaches and analysts regularly pose questions such as
+which strokes dominate a match, what replies tend to follow a smash, whether
+forward movement correlates with attacking opportunities, and whether opposing
+players exhibit distinct tactical profiles. These are data-mining questions, yet
+broadcast video does not supply the structured event tables needed to answer
+them. The raw signal must be converted from pixels into an ordered stroke
+sequence, and that conversion requires a chain of perception models whose errors
+accumulate before any mining step begins.
+
+This conversion is technically demanding. The shuttlecock is small and often
+motion-blurred; broadcast footage interleaves replays, close-ups, scoreboard
+inserts, and non-rally segments that must be filtered out. The far-court player
+appears at low resolution and may be partially occluded, degrading pose estimates
+at exactly the positions where attacking strokes are most frequent. Stroke
+classification is further complicated by the fine-grained taxonomy of badminton
+labels: a reliable system must distinguish, for example, a net shot from a return
+net, a drop from a push, or a smash from closely related attacking strokes.
+Without accounting for this error propagation, tactical analyses risk drawing
+conclusions from a corrupted event stream.
+
+We construct and evaluate \method, a practical end-to-end pipeline that converts
+badminton broadcast video into mineable tactical data. The overall architecture
+is depicted in Figure~\ref{fig:workflow}. The central research question is:
+\emph{\textbf{Can an integrated raw-video pipeline recover badminton stroke sequences
+that are sufficiently accurate and continuous to support meaningful tactical
+mining on unseen matches?}}  Our answer is cautiously affirmative: by combining
+simple yet reliable perception modules with careful integration, we recover
+coherent stroke sequences that support a variety of interpretable analyses.
+
+It is important to state the scope of this benchmark. The pipeline processes
+unseen raw frames through rally filtering, shuttle tracking, pose extraction,
+feature construction, stroke classification, and tactical mining. It does not
+yet constitute a fully automatic system for arbitrary unlabeled broadcasts: the
+unseen-video benchmark relies on ShuttleSet hit-frame indices to construct
+stroke windows and on ShuttleSet homographies for court normalization. We make
+this boundary explicit because it defines what the reported metrics demonstrate,
+and because the primary bottleneck we identify—far-side player extraction—remains
+an open problem even under fully automatic setups.
+
+Our main contributions are:
+\begin{itemize}[leftmargin=*,nosep]
+  \item an integrated raw-video badminton pipeline linking rally filtering,
+  shuttle tracking, pose extraction, and stroke classification into a single
+  reproducible workflow;
+  \item five tactical-mining analyses—stroke composition, Markov transitions,
+  frequent motifs, movement profiling, and clustering—that illustrate how the
+  recovered event stream can support diverse insights;
+  \item a mining-validation protocol that re-runs every analysis on matched
+  ground-truth labels and reports the predicted-vs-true gap for each view
+  (distribution KL/$\chi^2$, motif rank correlation, transition baselines, and
+  cluster ARI), turning unverified tactical claims into measured ones.
+\end{itemize}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{images/Overall_workflow.png}
+  \caption{\textbf{End-to-end \method{} pipeline.} Raw broadcast frames are
+  processed through rally filtering, shuttle tracking, player pose extraction,
+  and stroke classification. The resulting structured stroke table drives all
+  five tactical mining analyses. In our benchmark, ShuttleSet hit-frame labels
+  and homographies are supplied for window construction and court normalization.}
+  \label{fig:workflow}
+\end{figure*}

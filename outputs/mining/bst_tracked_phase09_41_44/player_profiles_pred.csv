@@ -1,3 +1,0 @@
-cluster,n_units,top_strokes,above_global_average,below_global_average,mean_distance_to_centroid
-0,4,"clear(0.18), long service(0.09), drop(0.14), smash(0.14), drive(0.06)","clear(+0.052), long service(+0.034), drop(+0.021), smash(+0.008), drive(+0.001)","lob(-0.039), net shot(-0.039), short service(-0.014)",3.323821998471127
-1,4,"lob(0.15), net shot(0.11), short service(0.07), return net(0.12), cross-court net shot(0.05)","lob(+0.039), net shot(+0.039), short service(+0.014), return net(+0.011), cross-court net shot(+0.011)","clear(-0.052), long service(-0.034), drop(-0.021)",2.1741522234461104

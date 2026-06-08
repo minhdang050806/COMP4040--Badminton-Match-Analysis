@@ -41,34 +41,61 @@ This is a substantial improvement over an earlier integrated baseline (8.41% all
 
 ## Repository Structure
 
+The code is organized by **pipeline stage**, each stage a self-contained Python
+package. Data flows top-to-bottom: perception stages produce features, `modeling`
+classifies strokes, and `data_mining` analyses the resulting stroke stream.
+
 ```
 COMP4040--Badminton-Match-Analysis/
-├── tools/                          # Python scripts — one per pipeline phase
-│   ├── phase00_01_inventory.py
-│   ├── phase02_build_ground_truth_tables.py
-│   ├── phase03_collate_bst_features.py
-│   ├── phase04_train_bst.py
-│   ├── phase04_run_bst_inference.py
-│   ├── phase05_rally_filtering.py
-│   ├── phase05_train_sacnn.py
-│   ├── phase05_finetune_all44.sh
-│   ├── phase05_build_sacnn_dataset.py
-│   ├── phase06_shuttle_tracking.py
-│   ├── phase07_hit_frame_detection.py
-│   ├── phase07_build_ground_truth_windows.py
-│   ├── phase07_tune_hit_frame_parameters.py
-│   ├── phase09_pose_position_features.py
-│   ├── phase09_compare_reference_features.py
-│   ├── phase10_prepare_bst_inputs.py
-│   ├── phase10_run_bst_inference.py
-│   ├── phase10_translate_outputs_to_english.py
-│   ├── phase11_tactical_mining.py
-│   ├── analyze_movement_strategy.py
-│   ├── bst_label_names.py
-│   ├── visualize_journal_report.py
-│   ├── visualize_phase05_phase06.py
-│   ├── visualize_phase09_features.py
-│   └── visualize_video44_showcase.py
+├── data_prep/                      # Dataset inventory + ShuttleSet ground-truth tables
+│   ├── inventory.py
+│   └── ground_truth_tables.py
+│
+├── rally_filtering/                # SA-CNN rally-view filtering
+│   ├── build_dataset.py            # Build SA-CNN ImageFolder dataset
+│   ├── train.py                    # Fine-tune SA-CNN
+│   ├── filter_rallies.py           # Apply filter to isolate rally frames
+│   └── finetune_all44.sh           # End-to-end fine-tuning driver
+│
+├── shuttle_tracking/               # TrackNetV3 shuttle tracking + denoising
+│   └── track.py
+│
+├── hit_detection/                  # Hit-frame detection + stroke windows
+│   ├── detect.py
+│   ├── tune_parameters.py
+│   └── build_ground_truth_windows.py
+│
+├── pose_features/                  # YOLO-pose player position + feature extraction
+│   ├── extract.py
+│   └── compare_reference.py
+│
+├── modeling/                       # Badminton-Stroke Transformer (stroke classification)
+│   ├── label_names.py              # Shared stroke-label helpers
+│   ├── collate_features.py         # Collate ShuttleSet BST features
+│   ├── train.py                    # Fine-tune BST
+│   ├── inference.py                # BST inference (model + metrics)
+│   ├── prepare_inputs.py           # Build integrated-pipeline BST inputs
+│   ├── integrated_inference.py     # Run BST on the raw-video pipeline
+│   └── translate_outputs.py        # Translate predicted labels to English
+│
+├── data_mining/                    # Tactical pattern mining
+│   ├── tactical_mining.py          # Transitions, motifs, spatial, clustering
+│   ├── movement_strategy.py        # Movement / strategy clustering
+│   ├── validation.py               # Mining-result validation study
+│   └── validation_figures.py       # Validation figures
+│
+├── visualization/                  # Figures and QA visualizations
+│   ├── journal_report.py
+│   ├── rally_and_shuttle.py
+│   ├── feature_plots.py
+│   ├── shuttle_tracking_rectangles.py
+│   └── video44_showcase.py
+│
+├── tests/                          # Unit tests (run with pytest / unittest)
+│   ├── test_movement_strategy.py
+│   ├── test_pose_features.py
+│   ├── test_modeling_integration.py
+│   └── test_tactical_mining.py
 │
 ├── __guidance__/                   # Project documentation and reports
 │   ├── COMP4040_course_project_and_rubric.md
@@ -78,9 +105,13 @@ COMP4040--Badminton-Match-Analysis/
 │   ├── data_mining.md              # Mining methodology
 │   ├── interpretation.md           # Results interpretation
 │   ├── source.md                   # External sources and repos
-│   ├── final_report.tex            # LaTeX report draft
-│   ├── reference.bib               # Bibliography
-│   ├── images/                     # Figures used in the report
+│   ├── final_report/               # LaTeX final report (modular)
+│   │   ├── main.tex                # Entry point — \input{src/*}
+│   │   ├── reference.bib           # Bibliography
+│   │   ├── src/                    # Per-section .tex sources
+│   │   ├── images/                 # Result figures used in the report
+│   │   └── figures/                # Logos / static assets
+│   ├── images/                     # Figures used in the markdown reports
 │   └── report/                     # Per-phase execution reports
 │       ├── phase_00_setup.md
 │       ├── phase_01_dataset_inventory.md
@@ -94,30 +125,18 @@ COMP4040--Badminton-Match-Analysis/
 │       ├── phase_10_integrated_inference.md
 │       └── phase_11_tactical_mining.md
 │
-└── outputs/                        # Pipeline outputs (text/CSV/JSON/images only)
-    ├── bst_collated/               # Collated BST feature sets + metadata CSVs
-    ├── bst_training_all44/         # BST training history, confusion matrix, metrics
-    ├── features_yolo26x_41_44/     # Phase 09 feature manifests and summaries
-    ├── hit_frames/                  # Per-rally hit-frame event CSVs
-    ├── integration/                 # Phase 10 integrated prediction tables
-    ├── inventory/                   # Dataset inventory tables
-    ├── journal_report_figures/      # Publication-quality figures
-    ├── mining/                      # Phase 11 tactical mining results
-    ├── movement_strategy/           # Movement and strategy cluster outputs
-    ├── phase09_window_ablation/     # Window-size ablation study results
-    ├── predictions/                 # Final stroke prediction tables
-    ├── rallies/                     # Per-video rally segmentation outputs
-    ├── sacnn_training_protocol/     # SA-CNN training logs
-    ├── shuttle/                     # TrackNetV3 shuttle tracking outputs
-    ├── tables/                      # Ground-truth tables (Phase 02)
-    └── visualizations/              # QA contact sheets and visualizations
+├── outputs/                        # Generated pipeline artifacts (git-ignored)
+├── requirements.txt                # Python dependencies
+├── conftest.py                     # Puts repo root on sys.path for tests
+└── .gitignore
 ```
 
-> **Not included in this repo** (too large or binary):
-> - Raw ShuttleSet videos and image crops (`dataset/`)
-> - Pre-trained and fine-tuned model weights (`weights/`, `*.pt`)
-> - Intermediate numpy feature arrays (`*.npy`, `*.npz`)
-> - Raw broadcast video files
+> **Not committed to this repo** (generated, large, or binary — see `.gitignore`).
+> Create these locally; the pipeline reads/writes them but they are never tracked:
+> - `dataset/` — raw ShuttleSet videos, annotations, and image crops
+> - `weights/` — pre-trained and fine-tuned model weights (`*.pt`, `*.pth`)
+> - `outputs/` — all generated CSV / JSON / NPY tables and figures produced by the pipeline
+> - Intermediate numpy feature arrays (`*.npy`, `*.npz`) and raw broadcast video
 
 ---
 
@@ -127,31 +146,80 @@ The project has two tracks:
 
 **Track A — ShuttleSet / benchmark path**
 ```
-Phase 00: environment setup
-  → Phase 01: dataset inventory
-  → Phase 02: ground-truth tactical tables from ShuttleSet annotations
-  → Phase 03: collate ShuttleSet BST features
-  → Phase 04: BST fine-tuning + stroke classification
-  → Phase 11: tactical mining on ground truth + predictions
+data_prep.inventory                 # dataset inventory
+  → data_prep.ground_truth_tables   # ground-truth tactical tables from ShuttleSet
+  → modeling.collate_features       # collate ShuttleSet BST features
+  → modeling.train / modeling.inference   # BST fine-tuning + stroke classification
+  → data_mining.tactical_mining     # tactical mining on ground truth + predictions
 ```
 
 **Track B — Raw unseen-video path**
 ```
 raw MP4
-  → Phase 05: SA-CNN fine-tuning + rally filtering
-  → Phase 06: TrackNetV3 shuttle tracking + denoising
-  → Phase 07: hit-frame parameter tuning + stroke windows
-  → Phase 08: court calibration / homography
-  → Phase 09: pose extraction, player position, feature normalization
-  → Phase 10: integrated inference
-  → Phase 11: tactical mining
+  → rally_filtering.*               # SA-CNN fine-tuning + rally filtering
+  → shuttle_tracking.track          # TrackNetV3 shuttle tracking + denoising
+  → hit_detection.*                 # hit-frame parameter tuning + stroke windows
+  → (court calibration / homography)
+  → pose_features.extract           # pose extraction, player position, normalization
+  → modeling.prepare_inputs / modeling.integrated_inference   # integrated inference
+  → data_mining.tactical_mining     # tactical mining
 ```
 
 ---
 
-## Running the Tools
+## Installation
 
-Each `tools/phase*.py` script is self-contained and reads from `outputs/` produced by prior phases. Paths are currently hardcoded relative to the `project/` working directory — adjust the `ROOT` or `BASE` constants at the top of each script before running.
+```bash
+git clone <repo-url>
+cd COMP4040--Badminton-Match-Analysis
+
+python -m venv .venv && source .venv/bin/activate   # optional but recommended
+pip install -r requirements.txt
+```
+
+> `torch` / `torchvision` are listed generically. For GPU support, install the
+> build matching your CUDA version from <https://pytorch.org> before (or instead
+> of) `pip install -r requirements.txt`.
+
+### Local data layout
+
+The pipeline reads datasets/weights and writes results into directories that are
+**not** committed (they are listed in `.gitignore`). Create them locally:
+
+```
+COMP4040--Badminton-Match-Analysis/
+├── dataset/    # ShuttleSet videos, annotations, crops  (you provide)
+├── weights/    # *.pt / *.pth model checkpoints           (you provide)
+└── outputs/    # produced by the tools as you run phases  (auto-created)
+```
+
+---
+
+## Running the Pipeline
+
+Each stage is a module inside its package and is self-contained — it reads from
+`outputs/` produced by earlier stages. Run modules **from the repository root**
+with `python -m <package>.<module>` so cross-package imports resolve, e.g.:
+
+```bash
+python -m data_prep.inventory                 # dataset inventory
+python -m modeling.train --help               # see options for a stage
+python -m data_mining.tactical_mining         # tactical pattern mining
+```
+
+> Data paths (`ROOT` / `DEFAULT_*` constants at the top of each module) are still
+> hardcoded relative to the original working directory. Adjust them to point at
+> your local `dataset/`, `weights/`, and `outputs/` before running a stage.
+
+### Tests
+
+```bash
+pip install pytest          # already in requirements.txt
+pytest                      # or: python -m unittest discover -s tests
+```
+
+`conftest.py` puts the repo root on `sys.path` so tests can import the pipeline
+packages, e.g. `from data_mining.tactical_mining import cluster_profiles`.
 
 External model repos required (not included here):
 - `BST-Badminton-Stroke-type-Transformer`
@@ -165,6 +233,7 @@ See [`__guidance__/source.md`](__guidance__/source.md) for upstream repository l
 
 ## Guidance and Reports
 
+- [`__guidance__/final_report/main.tex`](__guidance__/final_report/main.tex) — LaTeX final report (compile with `pdflatex main.tex && bibtex main && pdflatex main.tex` twice)
 - [`__guidance__/REPORT.md`](__guidance__/REPORT.md) — full project report with results and analysis
 - [`__guidance__/systems.md`](__guidance__/systems.md) — pipeline architecture and design decisions
 - [`__guidance__/report/`](__guidance__/report/) — per-phase execution logs (inputs, commands, outputs, validation)

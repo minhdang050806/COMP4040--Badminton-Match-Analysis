@@ -1,0 +1,34 @@
+%-----------------------------------------------------------------------
+\section{Limitations and Future Work}
+%-----------------------------------------------------------------------
+
+\paragraph{Benchmark scope.}
+Our evaluation processes raw frames through shuttle tracking, pose extraction,
+feature construction, and stroke classification. However, stroke windows still
+use ground-truth hit-frame indices and court normalization relies on provided
+homographies. The system should therefore be viewed as a raw-feature and
+stroke-classification pipeline under supplied temporal and spatial metadata, not
+a fully automatic system for arbitrary unlabeled broadcasts.
+
+\paragraph{Perception quality.}
+The main error source is far-side pose quality: its validity is just 54.29\%.
+Rally filtering occasionally retains post-rally broadcast content, adding noise
+near rally endpoints. Future work should focus on improving far-side detection,
+tightening rally boundaries, and adopting trajectory-based hit detection to
+remove reliance on annotated hit frames.
+
+\paragraph{Output scope.}
+We do not yet predict point winners, shuttle landing positions, persistent
+player identities, or continuous footwork trajectories. Side-specific
+distributions and clusters are therefore descriptive rather than causal: Top
+and Bottom are camera-relative positions, not persistent athletes, so any side
+differences reflect court geometry rather than player identity. Extending the
+system to predict outcomes and integrate point-level context is a promising
+direction.
+
+\paragraph{Future work.}
+Future extensions should improve far-side pose detection, replace ground-truth
+hit frames with trajectory-based hit detection, automate court calibration, and
+refine fine-grained stroke classification. Integrating the system with VR-based
+visual analytics such as VIRD \cite{vird2023} could also provide practitioners
+with interactive exploration of automatically derived event streams.

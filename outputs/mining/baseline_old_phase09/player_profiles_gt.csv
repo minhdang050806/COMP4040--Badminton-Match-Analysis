@@ -1,3 +1,0 @@
-cluster,n_units,mean_rally_len,mean_aggressive_frac,mean_netplay_frac,top_strokes
-0,26,4.73,0.141,0.252,"lob(0.13), net_shot(0.13), clear(0.12), defensive_net(0.09)"
-1,62,5.17,0.127,0.327,"net_shot(0.19), lob(0.15), defensive_net(0.10), push(0.08)"
